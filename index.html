@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Quality Product — Heirloom Stitching & Border Atelier</title>
+<meta name="description" content="Quality Product — a family-run embroidery factory: personalised baby keepsakes with custom fonts and motifs, plus a signature border library for Panjabi houses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400;500;600;700&family=Pinyon+Script&family=Parisienne&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#F7F2E8; --ivory2:#FBF8F1; --linen:#F1E9D8; --linen2:#EADFC8;
+  --ink:#2E2620; --ink2:#5C5145; --ink3:#8B7E6E;
+  --rose:#B96A70; --rose-d:#9E555C; --sage:#7E8D6F;
+  --wood:#9A744E; --wood2:#7C5B3B;
+  --line:rgba(46,38,32,.16); --line-soft:rgba(46,38,32,.09);
+  --serif:'Fraunces',Georgia,serif; --sans:'Instrument Sans',Helvetica,sans-serif;
+  --ease:cubic-bezier(.22,.75,.15,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font:400 1rem/1.65 var(--sans);color:var(--ink);background:var(--ivory);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(46,38,32,.028) 0 1px,transparent 1px 4px),
+             repeating-linear-gradient(90deg,rgba(46,38,32,.022) 0 1px,transparent 1px 4px)}
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,footer,header{position:relative;z-index:1}
+::selection{background:var(--rose);color:var(--ivory2)}
+:focus-visible{outline:1.5px dashed var(--rose);outline-offset:3px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--ivory)}
+::-webkit-scrollbar-thumb{background:var(--linen2);border:2px solid var(--ivory);border-radius:6px}
+section{scroll-margin-top:92px}
+img,svg{display:block}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+a{color:inherit;text-decoration:none}
+.container{max-width:1260px;margin-inline:auto;padding-inline:clamp(1.2rem,5vw,3.5rem)}
+.eyebrow{display:inline-flex;align-items:center;gap:.9rem;font:600 .68rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--rose)}
+.eyebrow::before{content:'';width:46px;height:1px;background-image:linear-gradient(90deg,var(--rose) 55%,transparent 0);background-size:7px 1px}
+h2{font:380 clamp(2.3rem,4.6vw,3.7rem)/1.08 var(--serif);letter-spacing:-.015em;margin:1.1rem 0 .9rem}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--rose)}
+.sec-head{max-width:640px;margin-bottom:clamp(2.4rem,5vw,4rem)}
+.sec-head p{color:var(--ink2);font-size:1.02rem}
+.code{font:600 .7rem var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--rose)}
+.stitch-link{position:relative;display:inline-flex;align-items:center;gap:.5rem;font:600 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.stitch-link::after{content:'';position:absolute;left:0;bottom:-5px;width:100%;height:1px;background-image:linear-gradient(90deg,var(--rose) 55%,transparent 0);background-size:7px 1px;transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.stitch-link:hover::after{transform:scaleX(1)}
+.stitch-link svg{width:15px;height:15px;transition:transform .4s var(--ease)}
+.stitch-link:hover svg{transform:translateX(4px)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:.7rem;font:600 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:1.12rem 1.85rem;background:var(--ink);color:var(--ivory2);border:1px solid var(--ink);transition:background .45s var(--ease),transform .3s var(--ease);overflow:hidden}
+.btn::before{content:'';position:absolute;inset:5px;border:1px dashed rgba(251,248,241,.55);opacity:0;transform:scale(.9);transition:.5s var(--ease)}
+.btn:hover{background:#4A3D31}
+.btn:hover::before{opacity:1;transform:scale(1)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:15px;height:15px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--ivory2)}
+.btn-sm{padding:.85rem 1.35rem}
+[data-reveal]{opacity:0;transform:translateY(26px);filter:blur(5px);transition:opacity .9s ease,transform .9s var(--ease),filter .9s ease;transition-delay:var(--d,0s)}
+[data-reveal].rv-in{opacity:1;transform:none;filter:none}
+
+/* ── loader ── */
+#loader{position:fixed;inset:0;z-index:200;background:var(--ivory2);display:grid;place-items:center;transition:transform .85s var(--ease)}
+#loader.done{transform:translateY(-101%)}
+.l-in{display:flex;flex-direction:column;align-items:center;gap:1rem}
+.l-in svg{width:110px;height:110px}
+.l-b{font:400 84px 'Pinyon Script',cursive;fill:var(--rose);stroke:var(--rose);stroke-width:1.4;stroke-dasharray:340;stroke-dashoffset:340;fill-opacity:0;animation:lStitch 1.5s var(--ease) .1s forwards}
+@keyframes lStitch{0%{stroke-dashoffset:340;fill-opacity:0}55%{stroke-dashoffset:0;fill-opacity:0}100%{stroke-dashoffset:0;fill-opacity:1}}
+.l-word{font:600 .66rem var(--sans);letter-spacing:.44em;color:var(--ink2);text-transform:uppercase;opacity:0;animation:lfade .8s ease .9s forwards}
+@keyframes lfade{to{opacity:1}}
+.l-bar{width:130px;height:1px;background:var(--line);overflow:hidden;margin-top:.4rem}
+.l-bar i{display:block;height:100%;width:40%;background:var(--rose);animation:lbar 1.1s ease-in-out infinite}
+@keyframes lbar{0%{transform:translateX(-110%)}100%{transform:translateX(340%)}}
+
+/* ── chrome ── */
+#sThread{position:fixed;top:0;left:0;right:0;height:2px;z-index:120;pointer-events:none}
+#sFill{display:block;height:100%;background:var(--rose);transform:scaleX(0);transform-origin:left}
+#sDot{position:absolute;top:-3px;left:0;width:8px;height:8px;background:var(--rose);transform:rotate(45deg);margin-left:-4px}
+#threadCanvas{position:fixed;inset:0;z-index:110;pointer-events:none}
+
+/* ── nav ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s ease,box-shadow .4s ease,border-color .4s;border-bottom:1px solid transparent}
+#nav.scrolled{background:rgba(251,248,241,.86);backdrop-filter:blur(12px);border-bottom-color:var(--line-soft)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand svg{width:32px;height:32px}
+.brand span{font:600 1.16rem var(--serif);letter-spacing:-.01em}
+.brand em{font-style:italic;font-weight:400;color:var(--rose)}
+.nlinks{display:flex;gap:2rem}
+.nlink{position:relative;font:500 .8rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);padding:.4rem 0;transition:color .3s}
+.nlink::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background-image:linear-gradient(90deg,var(--rose) 55%,transparent 0);background-size:6px 1px;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nlink:hover,.nlink.on{color:var(--ink)}
+.nlink:hover::after,.nlink.on::after{transform:scaleX(1)}
+.burger{display:none;width:40px;height:40px;position:relative;z-index:160}
+.burger i{position:absolute;left:9px;right:9px;height:1.6px;background:var(--ink);transition:.4s var(--ease)}
+.burger i:first-child{top:15px}.burger i:last-child{bottom:15px}
+body.menu-open .burger i:first-child{top:19px;transform:rotate(45deg)}
+body.menu-open .burger i:last-child{bottom:19px;transform:rotate(-45deg)}
+#menuOverlay{position:fixed;inset:0;z-index:150;background:var(--ivory2);display:flex;flex-direction:column;justify-content:center;padding:5rem clamp(1.5rem,8vw,4rem);gap:.35rem;clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ease);visibility:hidden}
+body.menu-open #menuOverlay{clip-path:inset(0 0 0 0);visibility:visible}
+.mlink{font:380 clamp(1.8rem,7vw,2.8rem)/1.3 var(--serif);color:var(--ink);opacity:0;transform:translateY(24px);transition:.6s var(--ease);display:flex;align-items:baseline;gap:1rem}
+.mlink small{font:600 .65rem var(--sans);letter-spacing:.25em;color:var(--rose)}
+body.menu-open .mlink{opacity:1;transform:none}
+.mlink:nth-child(2){transition-delay:.06s}.mlink:nth-child(3){transition-delay:.11s}.mlink:nth-child(4){transition-delay:.16s}
+.mlink:nth-child(5){transition-delay:.21s}.mlink:nth-child(6){transition-delay:.26s}.mlink:nth-child(7){transition-delay:.31s}.mlink:nth-child(8){transition-delay:.36s}
+.m-foot{margin-top:2rem;font-size:.85rem;color:var(--ink2);opacity:0;transition:opacity .6s ease .4s}
+body.menu-open .m-foot{opacity:1}
+
+/* ── hero ── */
+#hero{position:relative;padding:clamp(8rem,15vh,11rem) 0 4rem;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.hero-copy h1{font:380 clamp(2.7rem,5.6vw,4.5rem)/1.05 var(--serif);letter-spacing:-.02em;margin:1.3rem 0 1.4rem}
+.hl{display:block;overflow:hidden}
+.hl span{display:block;transform:translateY(112%);transition:transform 1.05s var(--ease);transition-delay:var(--d,0s)}
+body.loaded .hl span{transform:none}
+.hero-sub{max-width:46ch;color:var(--ink2);font-size:1.05rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin:2.1rem 0 2.6rem}
+.hero-stats{display:flex;flex-wrap:wrap;align-items:center;gap:1.1rem 1.4rem;font:600 .68rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink2)}
+.hero-stats b{font-weight:700;color:var(--ink)}
+.hero-stats i{width:5px;height:5px;background:var(--rose);transform:rotate(45deg);opacity:.75}
+.hero-stage{position:relative;display:grid;place-items:center}
+.hoop-wrap{perspective:1100px}
+.hoop-tilt{transform-style:preserve-3d;will-change:transform}
+.hoop-float{animation:hfloat 7s ease-in-out infinite}
+@keyframes hfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hoop-draw{stroke-dasharray:620;stroke-dashoffset:620;fill-opacity:0}
+.stitch-in{animation:nameStitch 2.5s var(--ease) forwards}
+@keyframes nameStitch{0%{stroke-dashoffset:620;fill-opacity:0}55%{stroke-dashoffset:0;fill-opacity:0}82%{fill-opacity:1}100%{stroke-dashoffset:0;fill-opacity:1}}
+.sparkle{position:absolute;opacity:0;transform:scale(0);animation:tw 3.8s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:0;transform:scale(0) rotate(0deg)}50%{opacity:.9;transform:scale(1) rotate(20deg)}}
+.needle-tr{transition:opacity .5s ease}
+.px{position:absolute;transition:transform .1s linear;pointer-events:none}
+.scroll-cue{position:absolute;left:50%;bottom:1.6rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.7rem}
+.scroll-cue span{font:600 .6rem var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--ink3);writing-mode:vertical-rl}
+.scroll-cue i{width:1px;height:52px;background-image:linear-gradient(180deg,var(--ink3) 55%,transparent 0);background-size:1px 6px;position:relative}
+.scroll-cue i::after{content:'';position:absolute;left:-2.5px;top:0;width:6px;height:6px;background:var(--rose);transform:rotate(45deg);animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%{top:0;opacity:0}25%{opacity:1}80%{opacity:1}100%{top:46px;opacity:0}}
+
+/* ── marquee ── */
+.marquee{border-block:1px solid var(--line-soft);padding:1.15rem 0;overflow:hidden;background:var(--ivory2)}
+.marquee-track{display:flex;width:max-content;animation:mar 32s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.m-set{display:flex;align-items:center;gap:2.6rem;padding-right:2.6rem}
+.m-set span{white-space:nowrap;font:600 .7rem var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--ink2)}
+.m-set i{width:6px;height:6px;border:1.2px solid var(--rose);transform:rotate(45deg);flex:none}
+@keyframes mar{to{transform:translateX(-50%)}}
+
+/* ── stitch divider ── */
+.sdiv-wrap{padding-block:.4rem}
+.sdiv{display:block;margin:0 auto;width:min(560px,80%);clip-path:inset(0 100% 0 0);transition:clip-path 1.3s var(--ease)}
+.sdiv.in{clip-path:inset(0 0 0 0)}
+.sdiv .ant{animation:ants 1.4s linear infinite}
+@keyframes ants{to{stroke-dashoffset:-18}}
+
+/* ── craft story ── */
+#craft{padding:clamp(5rem,10vh,8rem) 0 3rem}
+.craft-body{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.craft-panel{position:sticky;top:calc(50vh - 300px);background:var(--linen);border:1px solid var(--line-soft);padding:clamp(1rem,2vw,1.8rem);box-shadow:0 24px 50px -30px rgba(46,38,32,.35)}
+.craft-panel svg{width:100%;height:auto}
+.craft-chap{display:flex;align-items:baseline;gap:.9rem;margin-top:.9rem;padding-top:.9rem;border-top:1px dashed var(--line)}
+.craft-chap b{font:380 1.5rem var(--serif);font-style:italic;color:var(--rose)}
+.craft-chap span{font:600 .68rem var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--ink2)}
+#cP{stroke-dasharray:1;stroke-dashoffset:1}
+.scrub{stroke-dasharray:1;stroke-dashoffset:1}
+.scrub-op{opacity:0}
+.halo{transform-box:fill-box;transform-origin:center;animation:halo 1.8s ease-out infinite}
+@keyframes halo{0%{transform:scale(.4);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+.craft-step{min-height:76vh;display:flex;align-items:center}
+.cstep{max-width:44ch;position:relative;padding-left:1.6rem;border-left:1px dashed var(--line);opacity:.22;transform:translateX(14px);transition:.65s var(--ease)}
+.craft-step.active .cstep{opacity:1;transform:none;border-left-color:var(--rose)}
+.cstep .idx{font:300 italic clamp(3rem,5vw,4.2rem)/1 var(--serif);color:var(--linen2);-webkit-text-stroke:1px var(--line);transition:color .6s}
+.craft-step.active .cstep .idx{color:transparent;-webkit-text-stroke:1px var(--rose)}
+.cstep h3{font:480 1.75rem var(--serif);margin:.5rem 0 .7rem;letter-spacing:-.01em}
+.cstep p{color:var(--ink2)}
+
+/* ── archive ── */
+#archive{padding:clamp(5rem,10vh,8rem) 0;background:var(--ivory)}
+.arch-top{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.arch-hint{font:600 .64rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink3);display:flex;align-items:center;gap:.7rem;padding-bottom:.5rem}
+.arch-hint svg{width:30px;height:12px;stroke:var(--ink3);fill:none;stroke-width:1.5;stroke-linecap:round}
+#archRail{display:flex;gap:1.3rem;overflow-x:auto;padding:1.8rem .2rem 2.2rem;scroll-snap-type:x mandatory;cursor:grab;scrollbar-width:none;user-select:none;touch-action:pan-y}
+#archRail::-webkit-scrollbar{display:none}
+#archRail.dragging{cursor:grabbing;scroll-snap-type:none}
+.card{flex:0 0 296px;scroll-snap-align:start;background:var(--ivory2);border:1px solid var(--line-soft);position:relative;cursor:pointer;transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 55px -30px rgba(46,38,32,.45)}
+.card .art{position:relative;height:400px;overflow:hidden;background:#E8E2D4}
+.card .art svg{width:100%;height:100%;display:block;transition:transform .9s var(--ease)}
+.card:hover .art svg{transform:scale(1.05)}
+.card .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none}
+.card-cat{position:absolute;top:.9rem;right:.9rem;z-index:2;background:rgba(251,248,241,.92);border:1px solid var(--line);padding:.32rem .6rem;font:600 .56rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink2)}
+.card-meta{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.05rem 1.15rem;border-top:1px solid var(--line-soft)}
+.card-meta h3{font:500 1.15rem var(--serif);letter-spacing:-.01em}
+.card-meta .stitch-link{flex:none}
+.arch-prog{height:1px;background:var(--line);position:relative;margin-top:.3rem}
+.arch-prog i{position:absolute;left:0;top:-1px;height:3px;width:18%;background:var(--rose);transform:translateX(0)}
+
+/* ── atelier ── */
+#atelier{padding:clamp(5rem,10vh,8rem) 0;background:var(--ivory2);border-block:1px solid var(--line-soft)}
+.at-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4.5vw,4.5rem);align-items:start}
+.at-sheet{position:relative;box-shadow:0 40px 70px -38px rgba(46,38,32,.55);transform:rotate(.4deg)}
+.at-sheet svg{width:100%;height:auto;display:block}
+.dchips{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0 2rem}
+.dchip{display:flex;align-items:center;gap:.65rem;border:1px solid var(--line);padding:.62rem .95rem;transition:.3s var(--ease)}
+.dchip .sw{display:flex;padding-left:4px}
+.dchip .sw i{width:12px;height:12px;border-radius:50%;border:1px solid rgba(46,38,32,.25);margin-left:-4px}
+.dchip b{font:600 .72rem var(--sans);letter-spacing:.14em}
+.dchip:hover{border-color:var(--ink)}
+.dchip.sel{border-color:var(--ink);background:var(--ivory);outline:1px dashed var(--rose);outline-offset:3px}
+.at-id h3{font:400 clamp(1.7rem,3vw,2.2rem) var(--serif);margin:.2rem 0 .6rem;letter-spacing:-.01em}
+.at-specs{list-style:none;margin:1.2rem 0;display:grid;gap:.5rem}
+.at-specs li{display:flex;gap:.7rem;font-size:.92rem;color:var(--ink2);align-items:baseline}
+.at-specs li::before{content:'';width:5px;height:5px;background:var(--rose);transform:rotate(45deg);flex:none;translate:0 -1px}
+.at-sw{display:flex;gap:.5rem;align-items:center;margin-bottom:1.4rem}
+.at-sw i{width:20px;height:20px;border-radius:50%;border:1px solid rgba(46,38,32,.25)}
+.at-sw span{font:600 .62rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);margin-right:.4rem}
+.at-actions{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.6rem}
+.ctl-note{font-size:.8rem;color:var(--ink3);margin-top:.9rem}
+.ctl-note b{color:var(--ink2)}
+
+/* ── collection ── */
+#collection{padding:clamp(5rem,10vh,8rem) 0}
+.tiles{display:grid;grid-template-columns:repeat(12,1fr);gap:1.4rem}
+.t1{grid-column:1/7;grid-row:1/3}
+.t2{grid-column:7/10}.t3{grid-column:10/13}
+.t4{grid-column:7/10}.t5{grid-column:10/13}
+.tile{border:1px solid var(--line-soft);background:var(--ivory2);display:flex;flex-direction:column;transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+.tile:hover{transform:translateY(-7px);box-shadow:0 30px 55px -32px rgba(46,38,32,.4)}
+.tile-art{position:relative;overflow:hidden;transition:background .5s ease}
+.tile-art svg{width:100%;height:100%;display:block}
+.ill{transform:translateY(0);transition:transform .6s var(--ease)}
+.tile:hover .ill{transform:translateY(-7px)}
+.stitches{stroke-dashoffset:0}
+.tile:hover .stitches{animation:march 2.6s linear infinite}
+@keyframes march{to{stroke-dashoffset:-68}}
+.tile-no{position:absolute;top:1rem;left:1.1rem;font:600 .62rem var(--sans);letter-spacing:.3em;color:var(--ink3)}
+.tile-meta{display:flex;justify-content:space-between;gap:1rem;align-items:flex-end;padding:1.15rem 1.25rem 1.3rem;border-top:1px solid var(--line-soft)}
+.tile-meta h3{font:500 1.22rem var(--serif);letter-spacing:-.01em}
+.tile-meta p{font-size:.83rem;color:var(--ink3);margin-top:.2rem}
+.tile-buy{display:flex;flex-direction:column;align-items:flex-end;gap:.55rem;flex:none}
+.price{font:500 1.05rem var(--serif);font-style:italic;color:var(--ink)}
+.pers{color:var(--rose-d)}
+.pers svg{width:14px;height:14px}
+
+/* ── studio ── */
+#studio{padding:clamp(5rem,10vh,8rem) 0;background:var(--ivory2);border-block:1px solid var(--line-soft)}
+.studio-wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2rem,4.5vw,4.5rem);align-items:start}
+.pv-stage{position:relative;box-shadow:0 40px 70px -38px rgba(46,38,32,.5);transform:rotate(-.5deg)}
+#pvSvg{width:100%;height:auto}
+#pvFab,#pvName,#pvFrame,#pvCap,#pvMotifG path{transition:fill .5s ease,stroke .5s ease}
+.pv-sheen{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s ease;background:radial-gradient(260px circle at var(--mx,50%) var(--my,40%),rgba(255,255,255,.5),rgba(255,255,255,0) 65%)}
+.pv-stage:hover .pv-sheen{opacity:.5}
+.pv-bar{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:.75rem 1.1rem;background:rgba(251,248,241,.85);backdrop-filter:blur(6px);border-top:1px dashed var(--line)}
+.pv-bar p{font:600 .62rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink2)}
+#btnReplay{width:42px;height:42px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;transition:transform .5s var(--ease)}
+#btnReplay svg{width:17px;height:17px}
+#btnReplay:hover{transform:rotate(-160deg)}
+#pvCrosses .cross{opacity:0;transform-box:fill-box;transform-origin:center}
+#pvCrosses.go .cross{animation:cpop .5s var(--ease) forwards}
+#pvCrosses.go .cross:nth-of-type(2){animation-delay:.1s}
+#pvCrosses.go .cross:nth-of-type(3){animation-delay:.2s}
+#pvCrosses.go .cross:nth-of-type(4){animation-delay:.3s}
+@keyframes cpop{from{opacity:0;transform:scale(0) rotate(-40deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+.ctl{margin-bottom:2rem}
+.ctl-lab{display:flex;align-items:baseline;gap:.8rem;font:600 .66rem var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--rose);margin-bottom:.85rem}
+.ctl-lab small{color:var(--ink3);letter-spacing:.12em;font-weight:500}
+.tin{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);font:400 1.35rem var(--serif);font-style:italic;color:var(--ink);padding:.5rem 0;border-radius:0}
+.tin::placeholder{color:var(--ink3);opacity:.55}
+.tin:focus{outline:none;border-bottom-color:transparent;background-image:linear-gradient(90deg,var(--rose) 55%,transparent 0);background-size:8px 1px;background-repeat:repeat-x;background-position:bottom}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem}
+.chip{padding:.62rem 1.05rem;border:1px solid var(--line);font-size:1.08rem;color:var(--ink2);position:relative;transition:.35s var(--ease);background:transparent}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip.sel{border-color:var(--ink);color:var(--ink);background:var(--ivory)}
+.chip.sel::after{content:'';position:absolute;left:6px;right:6px;bottom:4px;height:1px;background-image:linear-gradient(90deg,var(--rose) 55%,transparent 0);background-size:6px 1px}
+.mchip{width:62px;height:62px;border:1px solid var(--line);display:grid;place-items:center;transition:.3s var(--ease)}
+.mchip svg{width:38px;height:38px;stroke:var(--ink2);fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+.mchip:hover{border-color:var(--ink)}
+.mchip:hover svg{stroke:var(--ink)}
+.mchip.sel{border-color:var(--rose);outline:1px dashed var(--rose);outline-offset:3px}
+.mchip.sel svg{stroke:var(--rose-d)}
+.dots{display:flex;flex-wrap:wrap;gap:.8rem}
+.dot{width:28px;height:28px;border-radius:50%;border:1px solid rgba(46,38,32,.25);transition:transform .3s var(--ease)}
+.dot:hover{transform:scale(1.15)}
+.dot.sel{outline:1.5px solid var(--ink);outline-offset:3px;transform:scale(1.05)}
+.sq{width:36px;height:36px;border:1px solid rgba(46,38,32,.25);transition:transform .3s var(--ease);background-image:repeating-linear-gradient(0deg,rgba(46,38,32,.05) 0 1px,transparent 1px 4px)}
+.sq:hover{transform:scale(1.08)}
+.sq.sel{outline:1.5px solid var(--ink);outline-offset:3px}
+.schip{display:flex;align-items:center;gap:.65rem;padding:.6rem .95rem;border:1px solid var(--line);transition:.3s var(--ease)}
+.schip svg{width:44px;height:12px}
+.schip em{font:600 .64rem var(--sans);letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:var(--ink2)}
+.schip:hover{border-color:var(--ink)}
+.schip.sel{border-color:var(--ink);background:var(--ivory);outline:1px dashed var(--rose);outline-offset:3px}
+.studio-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.4rem}
+
+/* ── voices ── */
+#voices{background:var(--ink);color:var(--ivory);padding:clamp(5rem,11vh,8rem) 0}
+#voices .eyebrow{color:var(--rose)}
+.qmark{font:400 7rem/0.4 var(--serif);color:var(--rose);height:3.4rem}
+.quotes{display:grid;min-height:230px;margin:1.6rem 0 2.4rem}
+.q{grid-area:1/1;opacity:0;transform:translateY(18px);transition:.7s var(--ease);visibility:hidden}
+.q.active{opacity:1;transform:none;visibility:visible}
+.q p{font:300 italic clamp(1.4rem,2.9vw,2.15rem)/1.4 var(--serif);max-width:26em}
+.q cite{display:block;margin-top:1.6rem;font:600 .7rem var(--sans);letter-spacing:.26em;text-transform:uppercase;font-style:normal;color:var(--rose)}
+.q-nav{display:flex;align-items:center;gap:1.6rem}
+.q-btn{width:44px;height:44px;border:1px solid rgba(247,242,232,.35);border-radius:50%;display:grid;place-items:center;color:var(--ivory);transition:.35s var(--ease)}
+.q-btn svg{width:16px;height:16px}
+.q-btn:hover{border-color:var(--rose);color:var(--rose);transform:scale(1.07)}
+.q-dashes{display:flex;gap:.5rem}
+.q-dashes i{width:24px;height:2px;background-image:linear-gradient(90deg,rgba(247,242,232,.4) 55%,transparent 0);background-size:5px 2px;transition:.3s}
+.q-dashes i.on{background-image:linear-gradient(90deg,var(--rose) 55%,transparent 0)}
+
+/* ── commissions ── */
+#commissions{padding:clamp(5rem,10vh,8rem) 0}
+.tier{border-top:1px solid var(--line)}
+.tier:last-of-type{border-bottom:1px solid var(--line)}
+.tier-head{width:100%;display:grid;grid-template-columns:3.4rem 1fr auto auto 2.5rem;gap:1.2rem;align-items:center;padding:1.7rem .4rem;text-align:left;transition:background .35s ease,padding .35s var(--ease)}
+.tier-head:hover{background:var(--ivory2);padding-left:1rem}
+.t-idx{font:300 italic 1.2rem var(--serif);color:var(--ink3)}
+.t-name{font:480 clamp(1.3rem,2.4vw,1.8rem) var(--serif);letter-spacing:-.01em}
+.t-sub{font-size:.82rem;color:var(--ink3);margin-top:.15rem}
+.t-price{font:500 1.05rem var(--serif);font-style:italic;white-space:nowrap}
+.t-price b{font-weight:600;font-size:1.35rem}
+.t-x{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:.45s var(--ease)}
+.t-x svg{width:13px;height:13px}
+.tier.open .t-x{transform:rotate(45deg);border-color:var(--rose);color:var(--rose)}
+.tier-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.tier.open .tier-body{grid-template-rows:1fr}
+.tier-in{overflow:hidden}
+.tier-pad{padding:0 .4rem 2rem calc(3.4rem + 1.2rem);max-width:640px}
+.tier-pad ul{list-style:none}
+.tier-pad li{position:relative;padding:.32rem 0 .32rem 1.4rem;color:var(--ink2);font-size:.94rem}
+.tier-pad li::before{content:'';position:absolute;left:2px;top:.95em;width:5px;height:5px;background:var(--rose);transform:rotate(45deg);opacity:.8}
+.tier-pad .stitch-link{margin-top:1rem}
+
+/* ── contact ── */
+#contact{padding:clamp(5rem,10vh,8rem) 0;background:var(--ivory2);border-top:1px solid var(--line-soft)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,6vw,6rem)}
+.c-info{display:flex;flex-direction:column;gap:1.7rem;margin-top:2.4rem}
+.c-line{display:flex;gap:1rem;align-items:flex-start}
+.c-line svg{width:20px;height:20px;flex:none;margin-top:.2rem;stroke:var(--rose);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.c-line b{display:block;font:600 .66rem var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--ink3);margin-bottom:.15rem}
+.c-line p{color:var(--ink)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.fld{margin-bottom:1.7rem}
+.fld label{display:block;font:600 .64rem var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--ink2);margin-bottom:.45rem}
+.fld input,.fld select,.fld textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);font:400 1.02rem var(--sans);color:var(--ink);padding:.6rem 0;border-radius:0;transition:border-color .3s}
+.fld textarea{resize:vertical;min-height:110px;line-height:1.6}
+.fld select{appearance:none;cursor:pointer;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232E2620' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right .2rem center}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-bottom-color:var(--rose)}
+.fld.err input,.fld.err textarea{border-bottom-color:var(--rose-d);animation:shake .35s ease}
+.fld .emsg{display:none;font-size:.75rem;color:var(--rose-d);margin-top:.35rem}
+.fld.err .emsg{display:block}
+@keyframes shake{0%,100%{transform:translateX(0)}30%{transform:translateX(-5px)}60%{transform:translateX(4px)}}
+#formWrap.sent form{display:none}
+#formDone{display:none;padding:2rem 0}
+#formWrap.sent #formDone{display:block}
+#formDone svg{width:64px;height:64px;margin-bottom:1.2rem}
+#formDone circle{stroke-dasharray:160;stroke-dashoffset:160;animation:draw .8s var(--ease) .1s forwards}
+#formDone path{stroke-dasharray:40;stroke-dashoffset:40;animation:draw .5s var(--ease) .7s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+#formDone h3{font:460 1.7rem var(--serif);margin-bottom:.4rem}
+#formDone p{color:var(--ink2);max-width:40ch}
+.btn.loading{pointer-events:none;color:transparent}
+.btn.loading::after{content:'';position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border:1.6px dashed var(--ivory2);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── footer ── */
+footer{background:var(--ink);color:var(--ivory);padding:4.5rem 0 2.2rem}
+.f-top{display:flex;justify-content:space-between;gap:3rem;flex-wrap:wrap;padding-bottom:3rem;border-bottom:1px dashed rgba(247,242,232,.22)}
+.f-brand h4{font:420 1.6rem var(--serif)}
+.f-brand h4 em{font-style:italic;color:var(--rose)}
+.f-brand p{max-width:32ch;color:rgba(247,242,232,.72);font-size:.9rem;margin-top:.8rem}
+.f-col b{display:block;font:600 .64rem var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem}
+.f-col a,.f-col p{display:block;color:rgba(247,242,232,.78);font-size:.92rem;padding:.24rem 0;transition:color .3s}
+.f-col a:hover{color:var(--ivory)}
+.f-bot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:1.8rem;font-size:.78rem;color:rgba(247,242,232,.55)}
+#toTop{width:44px;height:44px;border:1px solid rgba(247,242,232,.3);border-radius:50%;display:grid;place-items:center;color:var(--ivory);transition:.35s var(--ease)}
+#toTop svg{width:16px;height:16px}
+#toTop:hover{border-color:var(--rose);color:var(--rose);transform:translateY(-4px)}
+
+/* ── lightbox ── */
+#lightbox{position:fixed;inset:0;z-index:180;display:grid;place-items:center;padding:1.2rem;visibility:hidden;opacity:0;transition:opacity .4s ease,visibility .4s}
+#lightbox.open{visibility:visible;opacity:1}
+.lb-back{position:absolute;inset:0;background:rgba(31,26,22,.62);backdrop-filter:blur(6px)}
+.lb-box{position:relative;background:var(--ivory2);border:1px solid var(--ink);max-width:780px;width:100%;display:grid;grid-template-columns:1.05fr .95fr;transform:translateY(18px) scale(.98);transition:transform .45s var(--ease)}
+#lightbox.open .lb-box{transform:none}
+.lb-art{position:relative;min-height:460px;background:#E8E2D4}
+.lb-art svg,.lb-art img{position:absolute;inset:0;width:100%;height:100%}
+.lb-info{padding:2.2rem 1.8rem;display:flex;flex-direction:column;gap:.9rem}
+.lb-info h3{font:420 2rem var(--serif);letter-spacing:-.01em}
+.lb-info p{color:var(--ink2);font-size:.95rem}
+.lb-sw{display:flex;gap:.5rem}
+.lb-sw i{width:20px;height:20px;border-radius:50%;border:1px solid rgba(46,38,32,.25)}
+.lb-actions{margin-top:auto;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:1.2rem}
+.lb-cat{font:600 .6rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink3)}
+.lb-x{position:absolute;top:.9rem;right:.9rem;z-index:2;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:var(--ivory2);transition:.3s var(--ease)}
+.lb-x svg{width:14px;height:14px}
+.lb-x:hover{border-color:var(--rose);color:var(--rose);transform:rotate(90deg)}
+
+/* ── toasts ── */
+#toasts{position:fixed;bottom:1.4rem;right:1.4rem;z-index:190;display:flex;flex-direction:column;gap:.7rem}
+.toast{display:flex;align-items:center;gap:.85rem;background:var(--ivory2);border:1px solid var(--ink);box-shadow:0 18px 40px -18px rgba(46,38,32,.5);padding:.9rem 1.2rem;max-width:340px;animation:tin .5s var(--ease);position:relative}
+.toast::before{content:'';position:absolute;inset:4px;border:1px dashed var(--line);pointer-events:none}
+.toast.out{animation:tout .4s ease forwards}
+.t-ic{width:30px;height:30px;border-radius:50%;background:var(--rose);display:grid;place-items:center;flex:none}
+.t-ic svg{width:13px;height:13px;stroke:var(--ivory2);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.toast p{font-size:.85rem;color:var(--ink)}
+@keyframes tin{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes tout{to{opacity:0;transform:translateY(10px)}}
+
+/* ── responsive ── */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:4rem}
+  .hero-stage{order:-1}
+  .hoop-wrap{max-width:430px;margin-inline:auto}
+  .craft-body{grid-template-columns:1fr}
+  .craft-panel{position:sticky;top:70px;z-index:5}
+  .craft-step{min-height:64vh}
+  .studio-wrap,.at-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+}
+@media(max-width:860px){
+  .nlinks,#navCta{display:none}
+  .burger{display:block}
+  .tiles{grid-template-columns:1fr;gap:1.2rem}
+  .tiles .tile{grid-column:1/-1;grid-row:auto}
+  .tile-art{height:250px!important}
+  .t1 .tile-art{height:320px!important}
+  .tier-head{grid-template-columns:2.2rem 1fr auto 2.2rem;grid-template-areas:"i n p x" ". s s s";row-gap:.2rem}
+  .t-idx{grid-area:i}.t-name{grid-area:n}.t-price{grid-area:p}.t-x{grid-area:x}
+  .t-sub{grid-area:s}
+  .frow{grid-template-columns:1fr}
+  .lb-box{grid-template-columns:1fr}
+  .lb-art{min-height:320px;max-height:46vh}
+}
+@media(max-width:560px){
+  .hero-stats{gap:.7rem 1rem}
+  .craft-panel{padding:.7rem}
+  .tier-pad{padding-left:2.4rem}
+  .card{flex-basis:250px}
+  .card .art{height:340px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .hoop-draw{stroke-dashoffset:0;fill-opacity:1}
+  .scrub{stroke-dashoffset:0}.scrub-op{opacity:1}
+  [data-reveal]{opacity:1;transform:none;filter:none}
+  .sdiv{clip-path:inset(0 0 0 0)}
+}
+</style>
+</head>
+<body class="lock">
+
+<!-- ══════════ YOUR REAL PHOTOS ══════════
+     Save your five photos in an "images" folder next to this file:
+       images/emb-floral.jpg    (red floral baby dress)
+       images/emb-b116.jpg      (black + copper braid border)
+       images/emb-b24.jpg       (olive grid border sheet)
+       images/emb-b31.jpg       (diamond filigree border sheet)
+       images/emb-es10427.jpg   (black panjabi neckline set)
+     If a photo is missing, the hand-drawn vector sheet shows instead. -->
+
+<!-- Shared pattern + gradient library (drawn from your real designs) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="grad-red" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#C24A4E"/><stop offset="1" stop-color="#7E2226"/>
+  </linearGradient>
+  <!-- B-116 · ember braid -->
+  <pattern id="pat-ember" width="40" height="56" patternUnits="userSpaceOnUse">
+    <rect width="40" height="56" fill="#141110"/>
+    <path d="M10 2 C16 8 16 22 10 28 C4 22 4 8 10 2Z" fill="#C9894C" transform="rotate(16 10 15)"/>
+    <path d="M10 30 C16 36 16 50 10 56 C4 50 4 36 10 30Z" fill="#C9894C" transform="rotate(16 10 43)"/>
+    <path d="M30 -12 C36 -6 36 8 30 14 C24 8 24 -6 30 -12Z" fill="#8F8F8C" transform="rotate(-16 30 1)"/>
+    <path d="M30 16 C36 22 36 36 30 42 C24 36 24 22 30 16Z" fill="#8F8F8C" transform="rotate(-16 30 29)"/>
+    <path d="M30 44 C36 50 36 64 30 70 C24 64 24 50 30 44Z" fill="#8F8F8C" transform="rotate(-16 30 57)"/>
+  </pattern>
+  <!-- B-24 · courtyard grid -->
+  <pattern id="pat-courtyard" width="48" height="26" patternUnits="userSpaceOnUse">
+    <rect x="4" y="4" width="18" height="18" fill="none" stroke="#A39C72" stroke-width="2.4"/>
+    <rect x="11" y="10" width="4.5" height="6" fill="#8F8A7E"/>
+    <rect x="28" y="4" width="18" height="18" fill="none" stroke="#8F8A7E" stroke-width="2.4"/>
+    <rect x="35" y="10" width="4.5" height="6" fill="#A39C72"/>
+  </pattern>
+  <!-- B-31 · olive filigree -->
+  <pattern id="pat-filigree" width="34" height="46" patternUnits="userSpaceOnUse">
+    <path d="M8 2 l5 6 -5 6 -5 -6Z M8 14 l4 5 -4 5 -4 -5Z M8 26 l5 6 -5 6 -5 -6Z" fill="#9C9C98"/>
+    <g stroke="#A89F6E" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M24 10 C20 5 14 7 17 12 M24 10 C28 5 34 7 31 12"/>
+      <path d="M24 10 V34"/>
+    </g>
+    <path d="M24 34 l4.5 6 -4.5 6 -4.5 -6Z" fill="#A89F6E"/>
+    <circle cx="24" cy="6.5" r="1.6" fill="#A89F6E"/>
+  </pattern>
+  <!-- ES-10427 · keystone -->
+  <pattern id="pat-key" width="26" height="26" patternUnits="userSpaceOnUse">
+    <rect width="26" height="26" fill="#141210"/>
+    <path d="M3 23 V5 H23 V17 H11 V11 H17" fill="none" stroke="#B7B28B" stroke-width="2.6"/>
+  </pattern>
+  <pattern id="pat-lattice" width="22" height="22" patternUnits="userSpaceOnUse">
+    <rect width="22" height="22" fill="#141210"/>
+    <path d="M0 0 L22 22 M22 0 L0 22" stroke="#5E5E5A" stroke-width="1"/>
+    <circle cx="11" cy="11" r="1" fill="#77776F"/>
+  </pattern>
+  <pattern id="pat-star" width="30" height="30" patternUnits="userSpaceOnUse">
+    <rect width="30" height="30" fill="#141210"/>
+    <path d="M15 4 V26 M4 15 H26 M7 7 L23 23 M23 7 L7 23" stroke="#8F8F8C" stroke-width="1.4" fill="none"/>
+    <circle cx="15" cy="15" r="5" fill="none" stroke="#B7B28B" stroke-width="1.4"/>
+  </pattern>
+</defs></svg>
+
+<!-- Loader -->
+<div id="loader"><div class="l-in">
+  <svg viewBox="0 0 120 120" aria-hidden="true"><text class="l-b" x="60" y="92" text-anchor="middle">Q</text></svg>
+  <div class="l-word">Quality Product</div>
+  <div class="l-bar"><i></i></div>
+</div></div>
+
+<canvas id="threadCanvas" aria-hidden="true"></canvas>
+<div id="sThread" aria-hidden="true"><i id="sFill"></i><b id="sDot"></b></div>
+
+<!-- Nav -->
+<header id="nav"><div class="container nav-in">
+  <a href="#hero" class="brand" aria-label="Quality Product — home">
+    <svg viewBox="0 0 40 40" fill="none" stroke-linecap="round" aria-hidden="true">
+      <path d="M8 34 L30 8" stroke="#2E2620" stroke-width="2"/>
+      <circle cx="28" cy="10.5" r="2.4" stroke="#2E2620" stroke-width="1.6"/>
+      <path d="M28 10.5 C20 4 12 10 16 16 C20 22 12 28 5 26" stroke="#B96A70" stroke-width="1.7"/>
+    </svg>
+    <span>Quality <em>Product</em></span>
+  </a>
+  <nav class="nlinks" aria-label="Primary">
+    <a class="nlink" href="#craft">The Craft</a>
+    <a class="nlink" href="#archive">Archive</a>
+    <a class="nlink" href="#collection">Collection</a>
+    <a class="nlink" href="#studio">Studio</a>
+    <a class="nlink" href="#contact">Contact</a>
+  </nav>
+  <div id="navCta"><a class="btn btn-sm" href="#studio">Start an order</a></div>
+  <button class="burger" id="burger" aria-label="Open menu"><i></i><i></i></button>
+</div></header>
+
+<div id="menuOverlay">
+  <a class="mlink" href="#craft"><small>01</small>The Craft</a>
+  <a class="mlink" href="#archive"><small>02</small>The Archive</a>
+  <a class="mlink" href="#atelier"><small>03</small>Border Atelier</a>
+  <a class="mlink" href="#collection"><small>04</small>Collection</a>
+  <a class="mlink" href="#studio"><small>05</small>Monogram Studio</a>
+  <a class="mlink" href="#commissions"><small>06</small>Commissions</a>
+  <a class="mlink" href="#contact"><small>07</small>Contact</a>
+  <p class="m-foot">hello@qualityproduct.co · Mon–Fri 9:00–17:30 · The Linen Works, Unit 4</p>
+</div>
+
+<main>
+<!-- Hero -->
+<section id="hero">
+  <div class="px" data-speed="0.05" style="top:16%;left:6%">
+    <svg class="sparkle" style="position:static;animation-delay:.4s" width="22" height="22" viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M2 12h6M16 12h6" stroke="#B96A70" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </div>
+  <div class="px" data-speed="0.09" style="top:66%;left:3%">
+    <svg class="sparkle" style="position:static;animation-delay:1.6s" width="16" height="16" viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M2 12h6M16 12h6" stroke="#7E8D6F" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </div>
+  <div class="px" data-speed="0.07" style="top:22%;right:4%">
+    <svg class="sparkle" style="position:static;animation-delay:2.4s" width="18" height="18" viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M2 12h6M16 12h6" stroke="#B96A70" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow" data-reveal>Hand-guided embroidery factory · babywear &amp; border ateliers</div>
+      <h1>
+        <span class="hl"><span style="--d:.05s">Little names,</span></span>
+        <span class="hl"><span style="--d:.17s">stitched to be</span></span>
+        <span class="hl"><span style="--d:.29s"><em>kept forever.</em></span></span>
+      </h1>
+      <p class="hero-sub" data-reveal style="--d:.4s">Quality Product is a family-run stitching factory — heirloom babywear personalised with your fonts and motifs, plus a signature border library our Panjabi houses re-order season after season.</p>
+      <div class="hero-cta" data-reveal style="--d:.5s">
+        <a class="btn" href="#studio">Design in the Studio
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg></a>
+        <a class="stitch-link" href="#archive" style="align-self:center">Browse the archive</a>
+      </div>
+      <div class="hero-stats" data-reveal style="--d:.6s">
+        <span><b class="cnt" data-count="40000" data-suffix="+">0</b> pieces stitched</span><i></i>
+        <span><b class="cnt" data-count="900" data-suffix="+">0</b> designs digitised</span><i></i>
+        <span><b class="cnt" data-count="220">0</b> thread shades</span><i></i>
+        <span><b class="cnt" data-count="48" data-suffix="h">0</b> dispatch</span>
+      </div>
+    </div>
+    <div class="hero-stage" data-reveal style="--d:.35s">
+      <div class="hoop-wrap">
+        <div class="hoop-tilt" id="hoopTilt"><div class="hoop-float">
+          <svg id="hoopSvg" viewBox="0 0 520 600" fill="none" aria-label="Embroidery hoop stitching a baby's name">
+            <defs>
+              <pattern id="weaveH" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="7" stroke="#2E2620" stroke-width="1" opacity=".05"/>
+                <line x1="0" y1="3.5" x2="7" y2="3.5" stroke="#2E2620" stroke-width="1" opacity=".04"/>
+              </pattern>
+              <radialGradient id="hoopShade" cx=".5" cy=".45" r=".72">
+                <stop offset="70%" stop-color="#2E2620" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#2E2620" stop-opacity=".1"/>
+              </radialGradient>
+              <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+            </defs>
+            <ellipse cx="260" cy="570" rx="150" ry="13" fill="#2E2620" opacity=".12" filter="url(#soft)"/>
+            <circle cx="260" cy="282" r="240" fill="#EDE3CE"/>
+            <circle cx="260" cy="282" r="240" stroke="#2E2620" stroke-opacity=".14" stroke-width="1" stroke-dasharray="3 6"/>
+            <circle cx="260" cy="282" r="214" fill="#F8F3E8"/>
+            <circle cx="260" cy="282" r="214" fill="url(#weaveH)"/>
+            <circle cx="260" cy="282" r="214" fill="url(#hoopShade)"/>
+            <g stroke="#7E8D6F" stroke-width="2.4" stroke-linecap="round" fill="none">
+              <path d="M118 448 C134 432 152 424 172 422 M136 442 q-4 -14 4 -22 M150 434 q-2 -13 6 -20 M162 428 q0 -12 8 -18"/>
+              <path d="M402 448 C386 432 368 424 348 422 M384 442 q4 -14 -4 -22 M370 434 q2 -13 -6 -20 M358 428 q0 -12 -8 -18"/>
+            </g>
+            <g id="heroSparks">
+              <g class="sparkle" style="animation-delay:.2s"><path d="M126 172 v11 M126 189 v11 M114 184 h11 M131 184 h11" stroke="#B96A70" stroke-width="2" stroke-linecap="round"/></g>
+              <g class="sparkle" style="animation-delay:1.3s"><path d="M396 158 v9 M396 173 v9 M386 168 h9 M401 168 h9" stroke="#7E8D6F" stroke-width="2" stroke-linecap="round"/></g>
+              <g class="sparkle" style="animation-delay:2.2s"><path d="M96 330 v9 M96 345 v9 M86 340 h9 M101 340 h9" stroke="#B96A70" stroke-width="2" stroke-linecap="round"/></g>
+              <g class="sparkle" style="animation-delay:3s"><path d="M424 330 v9 M424 345 v9 M414 340 h9 M429 340 h9" stroke="#B96A70" stroke-width="2" stroke-linecap="round"/></g>
+            </g>
+            <text id="heroName" class="hoop-draw" x="260" y="318" text-anchor="middle" font-family="'Pinyon Script',cursive" font-size="116" fill="#B96A70" stroke="#B96A70" stroke-width="1.1">Eleanor</text>
+            <path id="flourish" d="M104 372 C180 396 340 396 416 368" pathLength="1" stroke="#B96A70" stroke-width="2" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+            <g id="heroNeedle" class="needle-tr" opacity="0">
+              <path d="M-15 0 L11 0" stroke="#2E2620" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="13.5" cy="0" r="2.3" stroke="#2E2620" stroke-width="1.4"/>
+              <path d="M16 0 C22 6 16 13 9 11" stroke="#B96A70" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            </g>
+            <circle cx="260" cy="282" r="221" stroke="#9A744E" stroke-width="15"/>
+            <circle cx="260" cy="282" r="230" stroke="#7C5B3B" stroke-width="2" stroke-opacity=".6"/>
+            <circle cx="260" cy="282" r="212" stroke="#7C5B3B" stroke-width="2.4" stroke-opacity=".5"/>
+            <g>
+              <rect x="246" y="42" width="28" height="26" rx="6" fill="#9A744E" stroke="#7C5B3B" stroke-width="1.6"/>
+              <circle cx="260" cy="34" r="9" fill="#7C5B3B"/>
+              <path d="M255 34 h10" stroke="#F7F2E8" stroke-width="1.6" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span>scroll</span><i></i></div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack">
+  <div class="m-set">
+    <span>Personal fonts</span><i></i><span>Signature motifs</span><i></i>
+    <span>Border library · B-116 → ES-10427</span><i></i><span>3-D ribbon florals</span><i></i>
+    <span>220 thread shades</span><i></i><span>Panjabi neckline sets</span><i></i>
+    <span>48-hour dispatch</span><i></i><span>Boutique &amp; brand wholesale</span><i></i>
+  </div>
+</div></div>
+
+<!-- Craft — scroll story -->
+<section id="craft">
+  <div class="container sec-head" data-reveal>
+    <div class="eyebrow">No. 01 — The Craft</div>
+    <h2>From a bare spool to a <em>boxed keepsake.</em></h2>
+    <p>Scroll, and watch a commission come together — the same route every piece travels through our workshop.</p>
+  </div>
+  <div class="container craft-body" id="craftWrap">
+    <div class="craft-panel" data-reveal>
+      <svg id="craftSvg" viewBox="0 0 440 640" fill="none" aria-hidden="true">
+        <defs>
+          <pattern id="weaveC" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="#2E2620" stroke-width="1" opacity=".05"/>
+            <line x1="0" y1="3.5" x2="7" y2="3.5" stroke="#2E2620" stroke-width="1" opacity=".04"/>
+          </pattern>
+        </defs>
+        <path d="M254 84 C330 92 372 136 348 184 C324 230 168 212 130 266 C94 318 148 352 222 360 C300 368 352 400 332 450 C318 488 262 496 224 512"
+          stroke="#2E2620" stroke-opacity=".15" stroke-width="1" stroke-dasharray=".004 .012" stroke-linecap="round"/>
+        <rect x="186" y="26" width="68" height="13" rx="6.5" fill="#EADFC8" stroke="#2E2620" stroke-width="2"/>
+        <rect x="186" y="97" width="68" height="13" rx="6.5" fill="#EADFC8" stroke="#2E2620" stroke-width="2"/>
+        <path class="scrub" data-a="0.01" data-b="0.05" d="M192 51 q32 -6 56 1" stroke="#B96A70" stroke-width="2.4" stroke-linecap="round" pathLength="1"/>
+        <path class="scrub" data-a="0.022" data-b="0.062" d="M192 63 q32 -6 56 1" stroke="#B96A70" stroke-width="2.4" stroke-linecap="round" pathLength="1"/>
+        <path class="scrub" data-a="0.034" data-b="0.074" d="M192 75 q32 -6 56 1" stroke="#B96A70" stroke-width="2.4" stroke-linecap="round" pathLength="1"/>
+        <path class="scrub" data-a="0.046" data-b="0.086" d="M192 87 q32 -6 56 1" stroke="#B96A70" stroke-width="2.4" stroke-linecap="round" pathLength="1"/>
+        <path id="cP" d="M254 84 C330 92 372 136 348 184 C324 230 168 212 130 266 C94 318 148 352 222 360 C300 368 352 400 332 450 C318 488 262 496 224 512" stroke="#B96A70" stroke-width="2.6" stroke-linecap="round"/>
+        <circle class="scrub-op" data-a="0.17" data-b="0.27" cx="204" cy="300" r="64" fill="#F8F3E8"/>
+        <circle class="scrub-op" data-a="0.18" data-b="0.28" cx="204" cy="300" r="64" fill="url(#weaveC)"/>
+        <circle class="scrub" data-a="0.15" data-b="0.25" cx="204" cy="300" r="72" pathLength="1" stroke="#9A744E" stroke-width="9"/>
+        <circle class="scrub" data-a="0.19" data-b="0.28" cx="204" cy="300" r="67.5" pathLength="1" stroke="#7C5B3B" stroke-width="2"/>
+        <path class="scrub" data-a="0.42" data-b="0.56" transform="translate(174,268) scale(0.6)" pathLength="1"
+          d="M50 78 C26 60 20 38 34 30 C43 25 50 32 50 39 C50 32 57 25 66 30 C80 38 74 60 50 78 Z"
+          stroke="#B96A70" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="scrub" data-a="0.74" data-b="0.82" d="M150 516 L220 490 L290 516 L220 542 Z" fill="#EADFC8" stroke="#2E2620" stroke-width="2" stroke-linejoin="round"/>
+        <path class="scrub" data-a="0.78" data-b="0.87" d="M158 522 L158 576 L220 600 L220 542 Z" fill="#F1E9D8" stroke="#2E2620" stroke-width="2" stroke-linejoin="round"/>
+        <path class="scrub" data-a="0.80" data-b="0.89" d="M220 542 L290 516 L290 572 L220 600 Z" fill="#E2D6BE" stroke="#2E2620" stroke-width="2" stroke-linejoin="round"/>
+        <path class="scrub" data-a="0.83" data-b="0.91" d="M186 499 L254 523" stroke="#B96A70" stroke-width="5" stroke-linecap="round"/>
+        <path class="scrub" data-a="0.85" data-b="0.93" d="M212 534 L212 596" stroke="#B96A70" stroke-width="5" stroke-linecap="round"/>
+        <path class="scrub" data-a="0.88" data-b="0.95" d="M220 516 C206 504 192 510 202 518 M220 516 C234 504 248 510 238 518" stroke="#B96A70" stroke-width="2.4" stroke-linecap="round"/>
+        <circle class="scrub-op" data-a="0.90" data-b="0.95" cx="220" cy="517" r="3.6" fill="#9E555C"/>
+        <path class="scrub" data-a="0.92" data-b="1" d="M238 520 L256 532 M254 528 l22 12 -9 17 -22 -12 z" stroke="#2E2620" stroke-width="1.8" stroke-linejoin="round" fill="#FBF7EC"/>
+        <circle class="scrub-op" data-a="0.96" data-b="1" cx="260" cy="537" r="1.8" fill="#2E2620" opacity=".9"/>
+        <g id="cNeedle" transform="translate(254,84)">
+          <circle class="halo" r="9" stroke="#B96A70" stroke-width="1.4"/>
+          <circle r="4.6" fill="#B96A70"/>
+        </g>
+      </svg>
+      <div class="craft-chap"><b id="chapNum">01</b><span id="chapName">The Thread</span><span style="margin-left:auto">/ 04</span></div>
+    </div>
+    <div class="craft-steps">
+      <article class="craft-step active"><div class="cstep">
+        <div class="idx">01.</div><h3>Choose the thread</h3>
+        <p>Two hundred and twenty shades of colourfast cotton and silk, wound in-house. Bring us a photo of the nursery — or last season's sell-out border — and we'll match the palette by eye, the way we have since 2012.</p>
+      </div></article>
+      <article class="craft-step"><div class="cstep">
+        <div class="idx">02.</div><h3>Hoop the cloth</h3>
+        <p>Organic muslin, bamboo terry, washed linen and panjabi cotton, hooped at hand-checked tension so nothing puckers — even after the hundredth wash.</p>
+      </div></article>
+      <article class="craft-step"><div class="cstep">
+        <div class="idx">03.</div><h3>Stitch the design</h3>
+        <p>Your font. Your motif. Your border code. Every commission is digitised from scratch, run at 750 stitches a minute, then inspected loop by loop before it leaves the frame.</p>
+      </div></article>
+      <article class="craft-step"><div class="cstep">
+        <div class="idx">04.</div><h3>Press &amp; parcel</h3>
+        <p>Steamed on the reverse, wrapped in acid-free tissue, tied with ribbon. Gift notes are hand-lettered — never printed.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<div class="container sdiv-wrap"><svg class="sdiv" viewBox="0 0 560 24" aria-hidden="true">
+  <path class="ant" d="M8 12 H552" fill="none" stroke="#8B7E6E" stroke-width="1.6" stroke-dasharray="10 8" stroke-linecap="round"/>
+  <rect x="274" y="6" width="12" height="12" transform="rotate(45 280 12)" fill="#B96A70"/>
+</svg></div>
+
+<!-- Archive -->
+<section id="archive">
+  <div class="container arch-top">
+    <div class="sec-head" data-reveal style="margin-bottom:0">
+      <div class="eyebrow">No. 02 — The Archive</div>
+      <h2>Our thread, <em>on record.</em></h2>
+      <p>Real production sheets from the factory floor — ribbon-work florals and the border codes our Panjabi houses re-order by number. Drag to browse; open a sheet to watch it stitch.</p>
+    </div>
+    <div class="arch-hint" data-reveal style="--d:.15s">
+      <svg viewBox="0 0 30 12"><path d="M1 6 H23 M18 1 L24 6 L18 11"/></svg> Drag · click a sheet
+    </div>
+  </div>
+  <div class="container">
+    <div id="archRail"></div>
+    <div class="arch-prog" aria-hidden="true"><i id="archThumb"></i></div>
+  </div>
+</section>
+
+<!-- Border Atelier -->
+<section id="atelier">
+  <div class="container sec-head" data-reveal>
+    <div class="eyebrow">No. 03 — The Border Atelier</div>
+    <h2>Four signature sheets, <em>stitched to spec.</em></h2>
+    <p>Load a design code onto the sheet and watch the stitch-out — the same mockup style our factory approves before a single meter runs.</p>
+  </div>
+  <div class="container at-grid">
+    <div class="at-sheet" id="atSheet" data-reveal>
+      <svg viewBox="0 0 560 640" aria-label="Interactive embroidery design sheet">
+        <rect id="sheetBg" width="560" height="640" fill="#12100D" style="transition:fill .6s ease"/>
+        <rect id="sheetFrame" x="16" y="16" width="528" height="608" fill="none" stroke="#EDE6D8" stroke-opacity=".35" stroke-dasharray="5 7" style="transition:stroke .6s"/>
+        <text id="sheetCode" x="280" y="74" text-anchor="middle" font-family="Fraunces,serif" font-size="40" letter-spacing="6" fill="#C9894C" style="transition:fill .6s">B-116</text>
+        <clipPath id="atClip"><rect id="atClipRect" x="50" y="96" width="460" height="0"/></clipPath>
+        <g clip-path="url(#atClip)">
+          <path id="bandL" d="M180 120 C104 250 106 420 200 596 L252 578 C168 420 170 258 234 136 Z" fill="url(#pat-ember)"/>
+          <rect id="lat" x="272" y="112" width="176" height="428" fill="url(#pat-lattice)" style="display:none"/>
+          <rect id="pL" x="272" y="112" width="34" height="428" fill="url(#pat-ember)"/>
+          <rect id="pR" x="414" y="112" width="34" height="428" fill="url(#pat-ember)"/>
+          <rect id="pkt" x="306" y="112" width="108" height="428" fill="#F6F3EA" style="display:none"/>
+          <g id="btns" style="display:none">
+            <g transform="translate(360,152)"><rect x="-9" y="-9" width="18" height="18" fill="#8E2F33"/><circle r="4.2" fill="#8F8F8C"/><circle r="1.5" fill="#3E3E3C"/></g>
+            <g transform="translate(360,226)"><rect x="-9" y="-9" width="18" height="18" fill="#8E2F33"/><circle r="4.2" fill="#8F8F8C"/><circle r="1.5" fill="#3E3E3C"/></g>
+            <g transform="translate(360,300)"><rect x="-9" y="-9" width="18" height="18" fill="#8E2F33"/><circle r="4.2" fill="#8F8F8C"/><circle r="1.5" fill="#3E3E3C"/></g>
+            <g transform="translate(360,374)"><rect x="-9" y="-9" width="18" height="18" fill="#8E2F33"/><circle r="4.2" fill="#8F8F8C"/><circle r="1.5" fill="#3E3E3C"/></g>
+          </g>
+          <rect id="pJ" x="272" y="508" width="176" height="32" fill="url(#pat-ember)"/>
+          <rect id="sleeve" x="496" y="160" width="48" height="380" fill="url(#pat-ember)"/>
+        </g>
+        <g id="atNeedle" transform="translate(360,132)" fill="#C9894C" style="opacity:0">
+          <circle class="halo" r="9" fill="none" stroke="#B96A70" stroke-width="1.4"/>
+          <circle r="4.6"/>
+        </g>
+        <text id="sheetFab" x="24" y="626" font-family="Instrument Sans,sans-serif" font-size="11" letter-spacing="2" fill="#EDE6D8" fill-opacity=".55">BLACK COTTON PANJABI · 1:1 SHEET</text>
+      </svg>
+    </div>
+    <div data-reveal style="--d:.15s">
+      <div class="ctl-lab">Select a design sheet</div>
+      <div class="dchips" id="dChips"></div>
+      <div class="at-id">
+        <span class="code" id="atCode">B-116</span>
+        <h3 id="atName">Ember Braid</h3>
+      </div>
+      <p id="atDesc" style="color:var(--ink2)"></p>
+      <ul class="at-specs" id="atSpecs"></ul>
+      <div class="at-sw"><span>Threads</span><span id="atSw" style="display:flex;gap:.5rem"></span></div>
+      <p class="ctl-note" style="margin-top:0">Recommended fabric: <b id="atFab"></b></p>
+      <div class="at-actions">
+        <button class="btn" id="btnUseDesign">Request this border
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg></button>
+        <button class="btn btn-ghost" id="btnReplaySheet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3v6h-6"/></svg>
+          Re-stitch</button>
+      </div>
+      <p class="ctl-note">Sheets mirror our production mockups 1 : 1 — the stitch-out you approve is the stitch-out you receive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Collection -->
+<section id="collection">
+  <div class="container sec-head" data-reveal>
+    <div class="eyebrow">No. 04 — The Collection</div>
+    <h2>Five blanks we stitch <em>most often.</em></h2>
+    <p>Every piece below can be personalised in the Studio — hover to watch its seams sew themselves, then make it unmistakably theirs.</p>
+  </div>
+  <div class="container tiles" id="tilesRoot"></div>
+</section>
+
+<!-- Monogram Studio -->
+<section id="studio">
+  <div class="container sec-head" data-reveal>
+    <div class="eyebrow">No. 05 — The Monogram Studio</div>
+    <h2>Their name, <em>your hand.</em></h2>
+    <p>Type a name, choose a lettering, a motif, a thread and a cloth — the panel stitches your commission live, exactly as our machines will.</p>
+  </div>
+  <div class="container studio-wrap">
+    <div class="pv-stage" data-reveal id="pvWrap">
+      <svg id="pvSvg" viewBox="0 0 640 500" aria-label="Live embroidery preview">
+        <defs>
+          <pattern id="weaveP" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="#2E2620" stroke-width="1" opacity=".05"/>
+            <line x1="0" y1="3.5" x2="7" y2="3.5" stroke="#2E2620" stroke-width="1" opacity=".04"/>
+          </pattern>
+          <clipPath id="pvClip"><rect id="pvClipRect" x="40" y="130" width="0" height="320"/></clipPath>
+          <mask id="pvMask" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="500">
+            <g id="pvMaskG" transform="translate(238,58) scale(1.64)"></g>
+          </mask>
+          <mask id="pvFrameMask" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="500">
+            <path id="pvFrameCover" d="M36 36 H604 V464 H36 Z" pathLength="100" fill="none" stroke="#fff" stroke-width="26" stroke-dasharray="100" stroke-dashoffset="100"/>
+          </mask>
+        </defs>
+        <rect id="pvFab" width="640" height="500" fill="#F8F3E8"/>
+        <rect width="640" height="500" fill="url(#weaveP)"/>
+        <rect id="pvFrame" x="36" y="36" width="568" height="428" pathLength="100" fill="none" stroke="#B96A70" stroke-opacity=".9" stroke-width="2.6" stroke-linecap="round" mask="url(#pvFrameMask)"/>
+        <g id="pvCrosses" stroke="#B96A70" stroke-width="2" stroke-linecap="round">
+          <g class="cross"><path d="M30 44 h-12 M36 38 v-12"/></g>
+          <g class="cross"><path d="M610 44 h12 M604 38 v-12"/></g>
+          <g class="cross"><path d="M30 456 h-12 M36 462 v12"/></g>
+          <g class="cross"><path d="M610 456 h12 M604 462 v12"/></g>
+        </g>
+        <g mask="url(#pvMask)"><g id="pvMotifG" transform="translate(238,58) scale(1.64)"></g></g>
+        <g clip-path="url(#pvClip)">
+          <text id="pvName" x="320" y="336" text-anchor="middle" fill="#B96A70" font-family="'Pinyon Script',cursive" font-size="88">Eleanor</text>
+        </g>
+        <text id="pvCap" x="320" y="392" text-anchor="middle" fill="#B96A70" fill-opacity="0" font-family="Fraunces,serif" font-size="17" letter-spacing="5"></text>
+      </svg>
+      <div class="pv-sheen" id="pvSheen"></div>
+      <div class="pv-bar">
+        <p>Live preview — single-name commission</p>
+        <button id="btnReplay" aria-label="Stitch it again">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3v6h-6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div data-reveal style="--d:.15s">
+      <div class="ctl">
+        <div class="ctl-lab">01 · The name <small>— up to 14 letters, stitched as typed</small></div>
+        <input class="tin" id="inName" maxlength="14" value="Eleanor" placeholder="e.g. Eleanor" autocomplete="off">
+      </div>
+      <div class="ctl">
+        <div class="ctl-lab">01·b <small>— a date or a little note (optional)</small></div>
+        <input class="tin" id="inCap" maxlength="24" value="07 · 14 · 2025" placeholder="a date, or a whisper" autocomplete="off">
+      </div>
+      <div class="ctl"><div class="ctl-lab">02 · The hand</div><div class="chips" id="fontChips"></div></div>
+      <div class="ctl"><div class="ctl-lab">03 · The motif</div><div class="chips" id="motifChips"></div></div>
+      <div class="ctl"><div class="ctl-lab">04 · The thread</div><div class="dots" id="threadDots"></div></div>
+      <div class="ctl"><div class="ctl-lab">05 · The cloth</div><div class="dots" id="fabDots"></div></div>
+      <div class="ctl">
+        <div class="ctl-lab">06 · The stitch</div>
+        <div class="chips" id="stitchChips">
+          <button class="schip sel" data-stitch="satin"><svg viewBox="0 0 44 12"><line x1="1" y1="6" x2="43" y2="6" stroke="#2E2620" stroke-width="2.6" stroke-linecap="round"/></svg><em>Satin</em></button>
+          <button class="schip" data-stitch="running"><svg viewBox="0 0 44 12"><line x1="1" y1="6" x2="43" y2="6" stroke="#2E2620" stroke-width="2.2" stroke-dasharray="5 4"/></svg><em>Running</em></button>
+          <button class="schip" data-stitch="chain"><svg viewBox="0 0 44 12"><line x1="2" y1="6" x2="42" y2="6" stroke="#2E2620" stroke-width="3.4" stroke-dasharray="0.1 6" stroke-linecap="round"/></svg><em>Chain</em></button>
+        </div>
+      </div>
+      <div class="studio-cta">
+        <button class="btn" id="btnAdd">Add to my enquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg></button>
+        <button class="btn btn-ghost" id="btnSurprise">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
+          Surprise me</button>
+      </div>
+      <p class="ctl-note">Nothing is charged here — the Studio composes a specification for your enquiry, and a digitised proof follows within one working day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Voices -->
+<section id="voices">
+  <div class="container" data-reveal>
+    <div class="eyebrow">No. 06 — Kind words</div>
+    <div class="qmark" aria-hidden="true">&ldquo;</div>
+    <div class="quotes" id="quotes">
+      <blockquote class="q active"><p>The bonnet arrived wrapped like a present from a fancier grandmother. Eleanor's name in that rose thread — I cried before we even opened the box.</p><cite>— Maren H. · Copenhagen</cite></blockquote>
+      <blockquote class="q"><p>We ordered two hundred personalised muslins for our store's baby boxes. Flawless stitching, delivered early — and customers now ask for "the embroidered one" by name.</p><cite>— Sole &amp; Sew · boutique, Lisbon</cite></blockquote>
+      <blockquote class="q"><p>Their B-24 border has been on our best-selling Panjabi for three seasons running. Same quality, every single run.</p><cite>— KD Panjabi · brand, Dhaka</cite></blockquote>
+    </div>
+    <div class="q-nav">
+      <button class="q-btn" id="qPrev" aria-label="Previous quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12H4M10 5l-7 7 7 7"/></svg></button>
+      <div class="q-dashes" id="qDashes"><i class="on"></i><i></i><i></i></div>
+      <button class="q-btn" id="qNext" aria-label="Next quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<div class="container sdiv-wrap"><svg class="sdiv" viewBox="0 0 560 24" aria-hidden="true">
+  <path class="ant" d="M8 12 H552" fill="none" stroke="#8B7E6E" stroke-width="1.6" stroke-dasharray="10 8" stroke-linecap="round"/>
+  <rect x="274" y="6" width="12" height="12" transform="rotate(45 280 12)" fill="#B96A70"/>
+</svg></div>
+
+<!-- Commissions -->
+<section id="commissions">
+  <div class="container sec-head" data-reveal>
+    <div class="eyebrow">No. 07 — Commissions</div>
+    <h2>Honest pricing, <em>no surprises.</em></h2>
+    <p>Single keepsakes or contract runs for boutiques and brands — every tier includes digitising, proofs and our stitch guarantee.</p>
+  </div>
+  <div class="container" data-reveal>
+    <div class="tier">
+      <button class="tier-head" aria-expanded="false">
+        <span class="t-idx">01</span>
+        <span><span class="t-name">The Petite</span><span class="t-sub" style="display:block">Single-name personalisation on any piece</span></span>
+        <span class="t-price">from <b>$26</b></span>
+        <span class="t-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="tier-body"><div class="tier-in"><div class="tier-pad"><ul>
+        <li>One name in any Studio hand</li><li>Choice of motif, thread &amp; cloth</li>
+        <li>Digitised proof before we stitch</li><li>Dispatch within 48 hours</li>
+      </ul></div></div></div>
+    </div>
+    <div class="tier">
+      <button class="tier-head" aria-expanded="false">
+        <span class="t-idx">02</span>
+        <span><span class="t-name">The Heirloom</span><span class="t-sub" style="display:block">Name + date, mixed stitches, gift-boxed</span></span>
+        <span class="t-price">from <b>$58</b></span>
+        <span class="t-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="tier-body"><div class="tier-in"><div class="tier-pad"><ul>
+        <li>Name, date or caption in two stitch styles</li><li>Signature motif with satin &amp; running detail</li>
+        <li>Priority digitising of your own artwork</li><li>Keepsake box, tissue &amp; hand-lettered note</li>
+        <li>Dispatch within 72 hours</li>
+      </ul></div></div></div>
+    </div>
+    <div class="tier">
+      <button class="tier-head" aria-expanded="false">
+        <span class="t-idx">03</span>
+        <span><span class="t-name">The Brand Line</span><span class="t-sub" style="display:block">Contract embroidery &amp; border libraries for labels</span></span>
+        <span class="t-price">from <b>$9</b>/unit</span>
+        <span class="t-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </button>
+      <div class="tier-body"><div class="tier-in"><div class="tier-pad"><ul>
+        <li>Contract runs from 50 pieces</li><li>Border archive digitised &amp; coded (B-numbers, ES-sets)</li>
+        <li>Your tags, your labels, your packaging</li><li>Dedicated digitiser, samples in 5 days</li>
+        <li>Net-30 terms for stockists</li>
+      </ul><a class="stitch-link" href="#contact">Request the wholesale line sheet
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg></a>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container contact-grid">
+    <div data-reveal>
+      <div class="eyebrow">No. 08 — Begin</div>
+      <h2>Begin an <em>heirloom.</em></h2>
+      <p style="color:var(--ink2)">Tell us the name, the date, the nursery colours — or the border code you'd like quoted. A digitised proof lands in your inbox within one working day; nothing is stitched before you love it.</p>
+      <div class="c-info">
+        <div class="c-line">
+          <svg viewBox="0 0 24 24"><path d="M4 20 L17 7"/><circle cx="18" cy="6" r="1.6"/><path d="M19 4.5 C22 7 20 11 16 11"/></svg>
+          <div><b>Write to us</b><p>hello@qualityproduct.co</p></div>
+        </div>
+        <div class="c-line">
+          <svg viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M9 3v4.5M9 16.5V21M15 3v4.5M15 16.5V21M9 9.5c3 2.2 3-2.2 6 0M9 13.5c3 2.2 3-2.2 6 0"/></svg>
+          <div><b>The workshop</b><p>The Linen Works, Unit 4, 18 Kelvin Lane<br>Mon–Fri · 9:00–17:30</p></div>
+        </div>
+        <div class="c-line">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 1v3M12 20v3"/></svg>
+          <div><b>Wholesale</b><p>trade@qualityproduct.co — line sheet on request</p></div>
+        </div>
+      </div>
+    </div>
+    <div id="formWrap" data-reveal style="--d:.15s">
+      <form id="cForm" novalidate>
+        <div class="frow">
+          <div class="fld" id="fWrapName"><label for="fName">Your name</label>
+            <input id="fName" type="text" autocomplete="name"><span class="emsg">We'd love to know who's writing.</span></div>
+          <div class="fld" id="fWrapEmail"><label for="fEmail">Email</label>
+            <input id="fEmail" type="email" autocomplete="email"><span class="emsg">That address doesn't look quite right.</span></div>
+        </div>
+        <div class="fld"><label for="fType">What are we stitching?</label>
+          <select id="fType">
+            <option>A baby blanket</option><option>A bonnet</option><option>A bodysuit or bib</option>
+            <option>A frock with ribbon florals</option><option>A panjabi border set</option><option>Wholesale enquiry</option>
+          </select>
+        </div>
+        <div class="fld" id="fWrapMsg"><label for="fMsg">Tell us more</label>
+          <textarea id="fMsg" placeholder="The name, the date, the nursery colours…"></textarea>
+          <span class="emsg">A sentence or two helps us digitise the design.</span></div>
+        <button class="btn" type="submit" id="fSend">Send the enquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg></button>
+      </form>
+      <div id="formDone">
+        <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="25" stroke="#B96A70" stroke-width="2" stroke-dasharray="4 5"/>
+          <path d="M21 33 l8 8 L45 24" stroke="#B96A70" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>It's in the hoop.</h3>
+        <p>Your enquiry is with our digitiser. Watch your inbox — a stitched proof arrives within one working day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="f-top">
+      <div class="f-brand">
+        <h4>Quality <em>Product</em></h4>
+        <p>A small factory with a hand-guided heart. Personal fonts, unique patterns, signature borders — and thread chosen like it matters, because it does.</p>
+      </div>
+      <div class="f-col"><b>Explore</b>
+        <a href="#craft">The Craft</a><a href="#archive">The Archive</a><a href="#atelier">Border Atelier</a>
+        <a href="#collection">Collection</a><a href="#studio">Monogram Studio</a><a href="#commissions">Commissions</a>
+      </div>
+      <div class="f-col"><b>Visit</b>
+        <p>The Linen Works, Unit 4<br>18 Kelvin Lane</p>
+        <p>Mon–Fri · 9:00–17:30</p>
+      </div>
+      <div class="f-col"><b>Write</b>
+        <a href="mailto:hello@qualityproduct.co">hello@qualityproduct.co</a>
+        <a href="mailto:trade@qualityproduct.co">trade@qualityproduct.co</a>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>© 2025 Quality Product — stitched with patience.</span>
+      <button id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V4M5 11l7-7 7 7"/></svg></button>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Design sheet viewer">
+  <div class="lb-back" data-close></div>
+  <figure class="lb-box">
+    <div class="lb-art" id="lbArt"></div>
+    <figcaption class="lb-info">
+      <span class="code" id="lbCode"></span>
+      <h3 id="lbName"></h3>
+      <span class="lb-cat" id="lbCat"></span>
+      <p id="lbDesc"></p>
+      <div class="lb-sw" id="lbSw"></div>
+      <div class="lb-actions">
+        <button class="btn btn-sm" id="lbApply">Apply to the sheet</button>
+      </div>
+    </figcaption>
+    <button class="lb-x" data-close aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </figure>
+</div>
+
+<div id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+/* ================================================================
+   Quality Product — interaction layer
+   ================================================================ */
+const qs=(s,r=document)=>r.querySelector(s), qsa=(s,r=document)=>[...r.querySelectorAll(s)];
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FINE=matchMedia('(pointer: fine)').matches;
+
+function toast(msg){
+  const t=document.createElement('div');t.className='toast';
+  t.innerHTML=`<span class="t-ic"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 7"/></svg></span><p>${msg}</p>`;
+  qs('#toasts').appendChild(t);
+  setTimeout(()=>{t.classList.add('out');setTimeout(()=>t.remove(),400)},3400);
+}
+
+/* ---------- Lenis buttery smooth scroll (graceful fallback) ---------- */
+let lenis=null;
+if(window.Lenis&&!RM){
+  lenis=new Lenis({duration:1.15,smoothWheel:true});
+  const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf);
+}
+function scrollToEl(el){
+  if(lenis)lenis.scrollTo(el,{offset:-76,duration:1.25});
+  else el.scrollIntoView({behavior:RM?'auto':'smooth'});
+}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[href^="#"]');if(!a)return;
+  const el=qs(a.getAttribute('href'));if(!el)return;
+  e.preventDefault();document.body.classList.remove('menu-open');
+  if(lenis)lenis.start();scrollToEl(el);
+});
+
+/* ---------- motif library (Monogram Studio) ---------- */
+const MOTIFS={
+  bunny:{n:'Bunny',d:['M74 64 a24 24 0 1 1 -48 0 a24 24 0 1 1 48 0','M38 46 C30 26 34 10 40 8 C46 6 48 24 46 44','M62 46 C70 26 66 10 60 8 C54 6 52 24 54 44','M38 63 q4 4.5 8 0','M54 63 q4 4.5 8 0','M47.5 71 q2.5 2.5 5 0','M28 68 l-9 -2 M28 73 l-9 2 M72 68 l9 -2 M72 73 l9 2']},
+  star:{n:'Little Star',d:['M50 16 L58.2 40.6 L84 41 L63.4 56.4 L71 81 L50 66.6 L29 81 L36.6 56.4 L16 41 L41.8 40.6 Z']},
+  crown:{n:'Crown',d:['M22 74 L22 42 L37 55 L50 32 L63 55 L78 42 L78 74 Z','M22 74 L78 74','M30 66 h4 M38 66 h4 M46 66 h4 M54 66 h4 M62 66 h4']},
+  laurel:{n:'Laurel',d:['M40 86 C22 76 14 50 28 24','M60 86 C78 76 86 50 72 24','M27 70 Q13 68 8 56 Q22 57 27 70','M21 52 Q8 47 6 34 Q19 37 21 52','M24 34 Q15 24 17 12 Q28 19 24 34','M73 70 Q87 68 92 56 Q78 57 73 70','M79 52 Q92 47 94 34 Q81 37 79 52','M76 34 Q85 24 83 12 Q72 19 76 34','M40 86 Q50 93 60 86']},
+  duck:{n:'Duckling',d:['M72 56 a22 22 0 1 1 -44 0 a22 22 0 1 1 44 0','M75 30 a13 13 0 1 1 -26 0 a13 13 0 1 1 26 0','M73 27 C81 26 83 31 79 34 L72 34','M64 26 l.01 0','M40 58 Q50 47 62 57','M16 82 Q22 76 28 82 T40 82 T52 82 T64 82 T76 82 T88 82']},
+  heart:{n:'Heart',d:['M50 78 C26 60 20 38 34 30 C43 25 50 32 50 39 C50 32 57 25 66 30 C80 38 74 60 50 78 Z']}
+};
+
+/* ---------- design sheets (from your real photos) ---------- */
+const DESIGNS={
+  b116:{code:'B-116',name:'Ember Braid',bg:'#12100D',codeCol:'#C9894C',ink:'#EDE6D8',
+    pat:'url(#pat-ember)',lattice:null,cuff:'url(#pat-ember)',placketSolid:null,btns:null,
+    desc:'A double braid of ember-copper and smoke-grey leaves, satin-run in tight columns. Our best-selling border on jet-black panjabi.',
+    sw:['#C9894C','#8F8F8C','#141110'],spec:['Satin column · 2.2 mm','≈ 42,600 stitches / set','2 thread heads · 1 needle'],fabricNote:'Black cotton panjabi'},
+  b24:{code:'B-24',name:'Courtyard Grid',bg:'#D9D9D9',codeCol:'#8F8A6E',ink:'#4E4B42',
+    pat:'url(#pat-courtyard)',lattice:null,cuff:'url(#pat-courtyard)',placketSolid:null,btns:null,
+    desc:'A quiet window-grid in olive and stone — the border that shipped inside the KD Panjabi gift box and never left the catalogue.',
+    sw:['#A39C72','#8F8A7E'],spec:['Boxed satin · 3 mm windows','≈ 28,400 stitches / set','2 thread heads'],fabricNote:'Stone-grey cotton'},
+  b31:{code:'B-31',name:'Olive Filigree',bg:'#EFEFEF',codeCol:'#A89F6E',ink:'#4E4B42',
+    pat:'url(#pat-filigree)',lattice:null,cuff:'url(#pat-filigree)',placketSolid:null,btns:null,
+    desc:'Diamond chains and curling olive sprigs — a scalloped edge made for festive collars, sleeves and hem lines.',
+    sw:['#A89F6E','#9C9C98'],spec:['Running + satin mix','≈ 36,900 stitches / set','2 thread heads'],fabricNote:'Ivory or white cotton'},
+  es:{code:'ES-10427',name:'Keystone Set',bg:'#0D0D0C',codeCol:'#B7B28B',ink:'#DCDCDC',
+    pat:'url(#pat-key)',lattice:'url(#pat-lattice)',cuff:'url(#pat-star)',placketSolid:'#F6F3EA',btns:'#8E2F33',
+    desc:'A full neckline set — Greek-key rails over a lattice fill, a bone-white placket and four lacquer-red buttons. Head-turner of the season.',
+    sw:['#B7B28B','#8E2F33','#8F8F8C'],spec:['Key rails 4 mm · lattice fill','≈ 61,200 stitches / set','3 thread heads'],fabricNote:'Jet-black panjabi'}
+};
+const ARCH=[
+  {id:'floral',code:'F-208',name:'Crimson Meadow',cat:'Babywear',
+   desc:'Raised ribbon-work poppies with sequin dew on printed cotton voile — our signature three-dimensional floral for frocks and gift sets.',
+   sw:['#B03A3F','#E98A7A','#E9C34C'],photo:'images/emb-floral.jpg'},
+  {id:'b116',code:'B-116',name:'Ember Braid',cat:'Border',desc:DESIGNS.b116.desc,sw:DESIGNS.b116.sw,photo:'images/emb-b116.jpg'},
+  {id:'b24',code:'B-24',name:'Courtyard Grid',cat:'Border · Panjabi',desc:DESIGNS.b24.desc,sw:DESIGNS.b24.sw,photo:'images/emb-b24.jpg'},
+  {id:'b31',code:'B-31',name:'Olive Filigree',cat:'Border · Panjabi',desc:DESIGNS.b31.desc,sw:DESIGNS.b31.sw,photo:'images/emb-b31.jpg'},
+  {id:'es',code:'ES-10427',name:'Keystone Set',cat:'Neckline set',desc:DESIGNS.es.desc,sw:DESIGNS.es.sw,photo:'images/emb-es10427.jpg'}
+];
+const ARCHBY=Object.fromEntries(ARCH.map(a=>[a.id,a]));
+
+function floralBody(){
+  const scat=[[26,64,0],[76,40,1],[126,70,0],[186,44,2],[244,60,1],[296,96,0],[40,150,1],[278,170,0],[52,232,2],[296,262,1],[30,330,0],[296,346,2],[54,392,1],[262,414,0],[132,438,2],[214,442,1],[92,344,0],[238,318,1],[160,104,2],[36,442,0]];
+  const cols=['#E98A7A','#E9C34C','#F2B8AC'];let s='';
+  scat.forEach(([x,y,c],i)=>{
+    s+=`<g transform="translate(${x},${y})" opacity=".9">`;
+    for(let p=0;p<5;p++)s+=`<ellipse cx="0" cy="-5" rx="3.4" ry="5" fill="${cols[c]}" transform="rotate(${p*72})"/>`;
+    s+=`<circle r="2" fill="#B96A70"/></g>`;
+    if(i%3===0)s+=`<ellipse cx="${x+10}" cy="${y+8}" rx="6" ry="2.6" fill="#7E8D6F" transform="rotate(-28 ${x+10} ${y+8})"/>`;
+    if(i%4===1)s+=`<circle cx="${x-12}" cy="${y-10}" r="1.6" fill="#E98A7A"/>`;
+  });
+  const big=(x,y,sz,rot)=>`<g transform="translate(${x},${y}) rotate(${rot})">
+    ${[0,120,240].map(a=>`<path d="M0 0 C ${-.5*sz} ${-.6*sz} ${-.34*sz} ${-sz} 0 ${-sz} C ${.34*sz} ${-sz} ${.5*sz} ${-.6*sz} 0 0 Z" fill="url(#grad-red)" stroke="#7E2226" stroke-width="1" transform="rotate(${a})"/>`).join('')}
+    ${[60,180,300].map(a=>`<path d="M0 0 C ${-.3*sz} ${-.35*sz} ${-.2*sz} ${-.6*sz} 0 ${-.6*sz} C ${.2*sz} ${-.6*sz} ${.3*sz} ${-.35*sz} 0 0 Z" fill="#C24A4E" transform="rotate(${a})"/>`).join('')}
+    <circle r="${sz*.14}" fill="#6E1B1F"/>
+    <circle cx="${sz*.1}" cy="${-sz*.12}" r="1.6" fill="#F7D9DC"/><circle cx="${-sz*.12}" cy="${sz*.05}" r="1.3" fill="#F7D9DC"/></g>`;
+  const leaf=(x,y,rot,sc=1)=>`<path transform="translate(${x},${y}) rotate(${rot}) scale(${sc})" d="M0 0 C -14 -8 -22 -26 -14 -38 C -2 -32 4 -14 0 0 Z" fill="url(#grad-red)" stroke="#7E2226" stroke-width="1"/>`;
+  return `
+    <path d="M150 170 C 128 210 108 236 102 268" fill="none" stroke="#8E2A2E" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M212 336 C 196 300 176 276 148 262" fill="none" stroke="#8E2A2E" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M150 170 C 176 196 198 260 208 318" fill="none" stroke="#8E2A2E" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M102 268 C 92 292 92 312 100 330" fill="none" stroke="#8E2A2E" stroke-width="4.5" stroke-linecap="round"/>
+    ${leaf(120,206,-30,1.1)}${leaf(176,214,24)}${leaf(96,306,-70,.9)}${leaf(190,268,60,.9)}
+    ${big(150,170,64,-8)}${big(102,268,52,14)}${big(212,336,60,4)}
+    <path d="M118 8 C 130 30 190 30 202 8" fill="none" stroke="#7E8D6F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M0 402 Q 20 438 40 402 Q 60 438 80 402 Q 100 438 120 402 Q 140 438 160 402 Q 180 438 200 402 Q 220 438 240 402 Q 260 438 280 402 Q 300 438 320 402 L320 460 L0 460 Z" fill="#F2E3E7" stroke="#E3C4CB" stroke-width="1.4"/>
+    ${[20,60,100,140,180,220,260,300].map(x=>`<path d="M${x} 420 V458" stroke="#E3C4CB" stroke-width="1"/>`).join('')}
+    <path d="M0 398 H320" stroke="#E3C4CB" stroke-width="2"/>`;
+}
+function sheetArt(id){
+  const A=ARCHBY[id];
+  let body='',frameCol='#B96A70',codeTxt='';
+  if(id==='floral'){
+    body=floralBody();
+  }else{
+    const D=DESIGNS[id];frameCol=D.ink;
+    const T=(id==='es')?74:84;
+    if(id==='es'){
+      body=`<path d="M0 0 H320 V30 C230 58 90 58 0 30 Z" fill="#DBDBD9"/>
+        <rect x="148" y="96" width="132" height="330" fill="url(#pat-lattice)"/>
+        <rect x="148" y="96" width="30" height="330" fill="url(#pat-key)"/>
+        <rect x="250" y="96" width="30" height="330" fill="url(#pat-key)"/>
+        <rect x="178" y="96" width="72" height="330" fill="#F6F3EA"/>
+        ${[0,1,2,3].map(i=>`<g transform="translate(214,${150+i*78})"><rect x="-9" y="-9" width="18" height="18" fill="#8E2F33"/><circle r="4" fill="#8F8F8C"/><circle r="1.4" fill="#4A4A48"/></g>`).join('')}
+        <rect x="282" y="150" width="30" height="290" fill="url(#pat-star)"/>
+        <path d="M100 ${T} C46 ${T+106} 48 ${T+232} 114 ${T+350} L148 ${T+336} C88 ${T+228} 90 ${T+102} 138 ${T+8} Z" fill="url(#pat-key)"/>`;
+      codeTxt=`<text x="160" y="24" text-anchor="middle" font-family="Fraunces,serif" font-size="22" letter-spacing="3" fill="#4A4A48">${A.code}</text>`;
+    }else{
+      const P=D.pat;
+      body=`<path d="M100 ${T} C46 ${T+106} 48 ${T+232} 114 ${T+350} L148 ${T+336} C88 ${T+228} 90 ${T+102} 138 ${T+8} Z" fill="${P}"/>
+        <rect x="162" y="96" width="44" height="330" fill="${P}"/>
+        <rect x="222" y="96" width="44" height="330" fill="${P}"/>
+        <rect x="162" y="392" width="104" height="30" fill="${P}"/>
+        <rect x="282" y="150" width="30" height="290" fill="${P}"/>
+        <text x="160" y="58" text-anchor="middle" font-family="Fraunces,serif" font-size="27" letter-spacing="3" fill="${D.codeCol}">${A.code}</text>`;
+    }
+  }
+  return `<svg viewBox="0 0 320 460" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${A.code} — ${A.name}">
+    <rect width="320" height="460" fill="${id==='floral'?'#F6EEF0':DESIGNS[id].bg}"/>
+    ${body}${codeTxt}
+    <rect x="10" y="10" width="300" height="440" fill="none" stroke="${frameCol}" stroke-opacity=".3" stroke-dasharray="4 6"/></svg>`;
+}
+
+/* ---------- archive rail ---------- */
+const rail=qs('#archRail');
+rail.innerHTML=ARCH.map((a,i)=>`
+  <article class="card" data-id="${a.id}" data-reveal style="--d:${(i*.07).toFixed(2)}s" tabindex="0" role="button" aria-label="Open ${a.code} ${a.name}">
+    <div class="art"><span class="card-cat">${a.cat}</span>${sheetArt(a.id)}
+      <img src="${a.photo}" alt="${a.code} — ${a.name}" loading="lazy" draggable="false" onerror="this.remove()">
+    </div>
+    <div class="card-meta"><div><span class="code">${a.code}</span><h3>${a.name}</h3></div>
+      <span class="stitch-link">View<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg></span>
+    </div>
+  </article>`).join('');
+/* drag to scroll + progress */
+let rDown=false,rSX=0,rSL=0,rMoved=0;
+rail.addEventListener('pointerdown',e=>{rDown=true;rSX=e.clientX;rSL=rail.scrollLeft;rMoved=0;rail.classList.add('dragging')});
+addEventListener('pointermove',e=>{if(!rDown)return;const dx=e.clientX-rSX;if(Math.abs(dx)>5)rMoved=1;rail.scrollLeft=rSL-dx});
+addEventListener('pointerup',()=>{rDown=false;rail.classList.remove('dragging')});
+rail.addEventListener('click',e=>{if(rMoved){e.stopPropagation();e.preventDefault();rMoved=0;return}
+  const c=e.target.closest('.card');if(c)openLB(c.dataset.id)});
+rail.addEventListener('keydown',e=>{if(e.key==='Enter'){const c=e.target.closest('.card');if(c)openLB(c.dataset.id)}});
+const archThumb=qs('#archThumb');
+function archProg(){const max=rail.scrollWidth-rail.clientWidth;if(max<=0)return;
+  archThumb.style.transform=`translateX(${(rail.scrollLeft/max*(rail.clientWidth-archThumb.offsetWidth)).toFixed(1)}px)`}
+rail.addEventListener('scroll',archProg,{passive:true});addEventListener('resize',archProg);archProg();
+
+/* ---------- lightbox ---------- */
+function openLB(id){
+  const a=ARCHBY[id];
+  qs('#lbArt').innerHTML=sheetArt(id)+`<img src="${a.photo}" alt="" onerror="this.remove()">`;
+  qs('#lbCode').textContent=a.code;qs('#lbName').textContent=a.name;
+  qs('#lbCat').textContent=a.cat;qs('#lbDesc').textContent=a.desc;
+  qs('#lbSw').innerHTML=a.sw.map(c=>`<i style="background:${c}"></i>`).join('');
+  qs('#lbApply').textContent=id==='floral'?'Personalise a name':'Apply to the sheet';
+  qs('#lbApply').dataset.id=id;
+  qs('#lightbox').classList.add('open');document.body.classList.add('lock');
+  lenis&&lenis.stop();qs('.lb-x').focus();
+}
+function closeLB(){qs('#lightbox').classList.remove('open');document.body.classList.remove('lock');lenis&&lenis.start()}
+qs('#lightbox').addEventListener('click',e=>{if(e.target.closest('[data-close]'))closeLB()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLB();document.body.classList.remove('menu-open')}});
+qs('#lbApply').addEventListener('click',()=>{
+  const id=qs('#lbApply').dataset.id;closeLB();
+  if(id==='floral'){scrollToEl(qs('#studio'));toast('Name it in the Monogram Studio below.')}
+  else{setDesign(id,true);scrollToEl(qs('#atelier'));toast(`${DESIGNS[id].code} loaded onto the sheet.`)}
+});
+
+/* ---------- border atelier ---------- */
+const at={cur:'b116'};let atSes=0;
+qs('#dChips').innerHTML=Object.entries(DESIGNS).map(([id,d])=>
+  `<button class="dchip" data-d="${id}"><span class="sw">${d.sw.slice(0,2).map(c=>`<i style="background:${c}"></i>`).join('')}</span><b>${d.code}</b></button>`).join('');
+function setDesign(id,anim=true){
+  const D=DESIGNS[id];at.cur=id;
+  qs('#sheetBg').style.fill=D.bg;
+  const sc=qs('#sheetCode');sc.textContent=D.code;sc.style.fill=D.codeCol;
+  qs('#sheetFrame').style.stroke=D.ink;
+  qs('#sheetFab').textContent=D.fabricNote.toUpperCase()+' · 1:1 SHEET';
+  qs('#sheetFab').style.fill=D.ink;
+  qs('#bandL').setAttribute('fill',D.pat);
+  const lat=qs('#lat');lat.style.display=D.lattice?'':'none';if(D.lattice)lat.setAttribute('fill',D.lattice);
+  ['pL','pR','pJ'].forEach(k=>qs('#'+k).setAttribute('fill',D.pat));
+  qs('#pkt').style.display=D.placketSolid?'':'none';
+  if(D.placketSolid)qs('#pkt').setAttribute('fill',D.placketSolid);
+  qs('#btns').style.display=D.btns?'':'none';
+  if(D.btns)qsa('#btns rect').forEach(b=>b.setAttribute('fill',D.btns));
+  qs('#sleeve').setAttribute('fill',D.cuff);
+  qs('#atCode').textContent=D.code;qs('#atName').textContent=D.name;qs('#atDesc').textContent=D.desc;
+  qs('#atFab').textContent=D.fabricNote;
+  qs('#atSpecs').innerHTML=D.spec.map(s=>`<li>${s}</li>`).join('');
+  qs('#atSw').innerHTML=D.sw.map(c=>`<i style="background:${c}"></i>`).join('');
+  qsa('.dchip').forEach(c=>c.classList.toggle('sel',c.dataset.d===id));
+  qs('#atNeedle').setAttribute('fill',D.codeCol);
+  if(anim)atPlay();
+}
+function atPlay(){
+  const rect=qs('#atClipRect'),nd=qs('#atNeedle');
+  if(RM){rect.setAttribute('height',560);nd.style.opacity=0;return}
+  const ses=++atSes;rect.setAttribute('height',0);nd.style.opacity=1;
+  const t0=performance.now();
+  (function f(n){if(ses!==atSes)return;
+    const p=Math.min(1,(n-t0)/1900),e=1-Math.pow(1-p,2);
+    rect.setAttribute('height',(560*e).toFixed(1));
+    nd.setAttribute('transform',`translate(360,${(132+400*e).toFixed(1)})`);
+    if(p<1)requestAnimationFrame(f);else nd.style.opacity=0;
+  })(t0);
+}
+qs('#dChips').addEventListener('click',e=>{const c=e.target.closest('.dchip');if(c)setDesign(c.dataset.d,true)});
+qs('#btnReplaySheet').addEventListener('click',()=>atPlay());
+qs('#btnUseDesign').addEventListener('click',()=>{
+  const D=DESIGNS[at.cur];
+  qs('#fMsg').value=`Border commission —\nDesign: ${D.code} · "${D.name}"\nPlacement: neckline, placket & sleeve set\nFabric: ${D.fabricNote}\n\nPlease quote a sample run.`;
+  scrollToEl(qs('#contact'));toast(`${D.code} written into your enquiry.`);
+});
+setDesign('b116',false);
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){atPlay();o.disconnect()}},{threshold:.35}).observe(qs('#atSheet'));
+
+/* ---------- loader ---------- */
+Promise.all([Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,2300))]),
+  new Promise(r=>setTimeout(r,RM?150:1250))]).then(()=>{
+  qs('#loader').classList.add('done');
+  document.body.classList.remove('lock');document.body.classList.add('loaded');
+  setTimeout(()=>qs('#loader').remove(),950);
+});
+
+/* ---------- one rAF: nav, progress thread, parallax, craft scrub ---------- */
+const nav=qs('#nav'),sFill=qs('#sFill'),sDot=qs('#sDot'),pxEls=qsa('.px');
+const craft={wrap:qs('#craftWrap'),P:qs('#cP'),needle:qs('#cNeedle'),num:qs('#chapNum'),name:qs('#chapName'),idx:-1,
+  scrubs:qsa('#craftSvg .scrub').map(el=>({el,a:+el.dataset.a,b:+el.dataset.b})),
+  ops:qsa('#craftSvg .scrub-op').map(el=>({el,a:+el.dataset.a,b:+el.dataset.b})),
+  steps:qsa('.craft-step'),names:['The Thread','The Cloth','The Stitch','The Keepsake']};
+craft.L=craft.P.getTotalLength();
+let ticking=false;
+function onScroll(){
+  if(ticking)return;ticking=true;
+  requestAnimationFrame(()=>{ticking=false;
+    const y=scrollY,vh=innerHeight;
+    nav.classList.toggle('scrolled',y>40);
+    const sp=clamp(y/(document.documentElement.scrollHeight-vh),0,1);
+    sFill.style.transform=`scaleX(${sp})`;sDot.style.left=(sp*100)+'%';
+    if(y<vh*1.3)pxEls.forEach(el=>el.style.transform=`translateY(${y*+el.dataset.speed}px)`);
+    craftTick(vh);
+  });
+}
+function craftTick(vh){
+  const r=craft.wrap.getBoundingClientRect();
+  if(r.top>vh||r.bottom<-80)return;
+  const p=RM?1:clamp((vh*.6-r.top)/(r.height-vh*.55),0,1);
+  craft.P.style.strokeDashoffset=1-p;
+  const pt=craft.P.getPointAtLength(p*craft.L);
+  craft.needle.setAttribute('transform',`translate(${pt.x.toFixed(1)},${pt.y.toFixed(1)})`);
+  craft.scrubs.forEach(s=>s.el.style.strokeDashoffset=1-clamp((p-s.a)/(s.b-s.a),0,1));
+  craft.ops.forEach(s=>s.el.style.opacity=clamp((p-s.a)/(s.b-s.a),0,1));
+  const idx=Math.min(3,Math.floor(p*3.999));
+  craft.steps.forEach((st,i)=>st.classList.toggle('active',i===idx));
+  if(idx!==craft.idx){craft.idx=idx;craft.num.textContent='0'+(idx+1);craft.name.textContent=craft.names[idx]}
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* ---------- scrollspy ---------- */
+const spy=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)qsa('.nlink').forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id));
+}),{rootMargin:'-40% 0px -55%'});
+['craft','archive','atelier','collection','studio','commissions','contact'].forEach(id=>{const s=qs('#'+id);if(s)spy.observe(s)});
+
+/* ---------- mobile menu ---------- */
+qs('#burger').addEventListener('click',()=>{
+  const open=document.body.classList.toggle('menu-open');
+  if(lenis)open?lenis.stop():lenis.start();
+});
+
+/* ---------- reveal / dividers / counters ---------- */
+qsa('[data-reveal]').forEach(el=>{new IntersectionObserver((es,o)=>{
+  if(es[0].isIntersecting){es[0].target.classList.add('rv-in');o.unobserve(es[0].target)}
+},{threshold:.12,rootMargin:'0px 0px -40px'}).observe(el)});
+qsa('.sdiv').forEach(d=>{new IntersectionObserver((es,o)=>{
+  if(es[0].isIntersecting){d.classList.add('in');o.disconnect()}
+},{threshold:.6}).observe(d)});
+qsa('.cnt').forEach(el=>{new IntersectionObserver((es,o)=>{
+  if(!es[0].isIntersecting)return;o.disconnect();
+  const t=+el.dataset.count,suf=el.dataset.suffix||'',st=performance.now();
+  (function f(n){const p=Math.min(1,(n-st)/1400),e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(t*e).toLocaleString('en-US')+suf;
+    if(p<1)requestAnimationFrame(f)})(st);
+},{threshold:.6}).observe(el)});
+
+/* ---------- hero: cycling names, travelling needle, tilt ---------- */
+const NAMES=['Eleanor','Théodore','Amara','Beatrix','Wren','Noah'];
+const heroName=qs('#heroName'),flourish=qs('#flourish'),heroNeedle=qs('#heroNeedle'),hoopTilt=qs('#hoopTilt');
+let nameIdx=0,lastSwap=performance.now()+600,flourStart=performance.now()+600;
+let tRX=0,tRY=0,rx=0,ry=0,heroVisible=true;
+new IntersectionObserver(es=>heroVisible=es[0].isIntersecting).observe(qs('#hero'));
+function fitHeroName(){
+  heroName.setAttribute('font-size',116);
+  const w=heroName.getComputedTextLength();
+  if(w>350)heroName.setAttribute('font-size',Math.max(60,116*350/w));
+}
+function swapHeroName(){
+  nameIdx=(nameIdx+1)%NAMES.length;
+  heroName.textContent=NAMES[nameIdx];
+  try{fitHeroName()}catch(e){}
+  heroName.classList.remove('stitch-in');void heroName.getBoundingClientRect();
+  heroName.classList.add('stitch-in');
+  flourStart=performance.now();
+}
+document.fonts.ready.then(()=>{try{fitHeroName()}catch(e){}});
+if(!RM){
+  const stage=qs('.hero-stage');
+  stage.addEventListener('pointermove',e=>{
+    const r=stage.getBoundingClientRect();
+    tRY=((e.clientX-r.left)/r.width-.5)*9;tRX=-((e.clientY-r.top)/r.height-.5)*7;
+  });
+  stage.addEventListener('pointerleave',()=>{tRX=0;tRY=0});
+  (function heroLoop(now){
+    requestAnimationFrame(heroLoop);
+    if(!heroVisible||document.hidden)return;
+    rx+=(tRX-rx)*.06;ry+=(tRY-ry)*.06;
+    hoopTilt.style.transform=`rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg)`;
+    if(now-lastSwap>5200){lastSwap=now;if(now>flourStart+3000)swapHeroName();}
+    const p=clamp((now-flourStart)/3200,0,1),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+    flourish.style.strokeDashoffset=1-e;
+    const L=flourish.getTotalLength(),pt=flourish.getPointAtLength(e*L),
+          pt2=flourish.getPointAtLength(Math.min(L,e*L+1.5)),
+          ang=Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI;
+    heroNeedle.setAttribute('transform',`translate(${pt.x.toFixed(1)},${pt.y.toFixed(1)}) rotate(${ang.toFixed(1)})`);
+    heroNeedle.style.opacity=p>=1?0:1;
+  })(performance.now());
+}else{flourish.style.strokeDashoffset=0}
+
+/* ---------- loose thread cursor ---------- */
+if(FINE&&!RM){
+  const cv=qs('#threadCanvas'),cx=cv.getContext('2d');
+  let W,H,DPR;const mouse={x:-200,y:-200},pulses=[];
+  const N=16,SEG=11,pts=Array.from({length:N},()=>({x:-200,y:-200}));
+  function size(){DPR=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;
+    cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';cx.setTransform(DPR,0,0,DPR,0,0)}
+  size();addEventListener('resize',size);
+  addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+  addEventListener('pointerdown',e=>pulses.push({x:e.clientX,y:e.clientY,r:4,a:.45}));
+  document.addEventListener('mouseleave',()=>{mouse.x=-200;mouse.y=-200});
+  (function loop(){
+    requestAnimationFrame(loop);
+    cx.clearRect(0,0,W,H);
+    pts[0].x+=(mouse.x-pts[0].x)*.4;pts[0].y+=(mouse.y-pts[0].y)*.4;
+    for(let i=1;i<N;i++){
+      const p=pts[i],q=pts[i-1];let dx=p.x-q.x,dy=p.y-q.y;const d=Math.hypot(dx,dy)||1;
+      const tx=q.x+dx/d*SEG,ty=q.y+dy/d*SEG+i*.32;
+      p.x+=(tx-p.x)*.5;p.y+=(ty-p.y)*.5;
+    }
+    cx.beginPath();cx.moveTo(pts[0].x,pts[0].y);
+    for(let i=1;i<N-1;i++){const mx=(pts[i].x+pts[i+1].x)/2,my=(pts[i].y+pts[i+1].y)/2;cx.quadraticCurveTo(pts[i].x,pts[i].y,mx,my)}
+    cx.strokeStyle='rgba(185,106,112,.45)';cx.lineWidth=1.1;cx.stroke();
+    if(mouse.x>-100){
+      const a=Math.atan2(pts[0].y-pts[1].y,pts[0].x-pts[1].x);
+      cx.save();cx.translate(pts[0].x,pts[0].y);cx.rotate(a);
+      cx.strokeStyle='#2E2620';cx.lineWidth=1.6;cx.lineCap='round';
+      cx.beginPath();cx.moveTo(-13,0);cx.lineTo(2,0);cx.stroke();
+      cx.beginPath();cx.arc(3.5,0,1.4,0,7);cx.stroke();cx.restore();
+    }
+    for(let i=pulses.length-1;i>=0;i--){const pu=pulses[i];pu.r+=1.7;pu.a-=.016;
+      if(pu.a<=0){pulses.splice(i,1);continue}
+      cx.beginPath();cx.setLineDash([3,4]);cx.arc(pu.x,pu.y,pu.r,0,7);
+      cx.strokeStyle=`rgba(185,106,112,${pu.a})`;cx.lineWidth=1.2;cx.stroke();cx.setLineDash([]);}
+  })();
+}
+
+/* ---------- marquee ---------- */
+qs('#marqueeTrack').appendChild(qs('.m-set').cloneNode(true));
+
+/* ---------- collection tiles ---------- */
+function motifGroup(m,x,y,s,sw,dash){
+  return `<g class="stitches" transform="translate(${x},${y}) scale(${s})" fill="none" stroke="#B96A70"
+    stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="${dash}">${MOTIFS[m].d.map(d=>`<path d="${d}"/>`).join('')}</g>`;
+}
+const IL={
+  blanket:m=>`
+    <ellipse cx="160" cy="214" rx="120" ry="10" fill="#2E2620" opacity=".07"/>
+    <rect x="72" y="176" width="176" height="26" rx="13" fill="#E7DCC6" stroke="#2E2620" stroke-width="1.4"/>
+    <rect x="62" y="150" width="196" height="28" rx="14" fill="#F0E8D7" stroke="#2E2620" stroke-width="1.4"/>
+    <rect x="70" y="118" width="180" height="34" rx="17" fill="#FBF7EC" stroke="#2E2620" stroke-width="1.4"/>
+    <rect class="stitches" x="76" y="124" width="168" height="22" rx="11" fill="none" stroke="#B96A70" stroke-width="1.5" stroke-dasharray="4.5 4" stroke-linecap="round"/>
+    ${motifGroup(m,143,118,.34,6,'7 6')}
+    <path d="M212 112 l16 -13 9 11 -16 13 z" fill="#EFE7D6" stroke="#2E2620" stroke-width="1.3"/>
+    <circle cx="221" cy="118" r="1.6" fill="#2E2620" opacity=".5"/>`,
+  bonnet:m=>`
+    <ellipse cx="160" cy="212" rx="105" ry="9" fill="#2E2620" opacity=".07"/>
+    <path d="M96 150 C88 168 80 180 68 190" fill="none" stroke="#2E2620" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M224 150 C232 168 240 180 252 190" fill="none" stroke="#2E2620" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M68 190 q-13 -10 -15 3 q11 6 15 -3 z" fill="#E7DCC6" stroke="#2E2620" stroke-width="1.2"/>
+    <path d="M252 190 q13 -10 15 3 q-11 6 -15 -3 z" fill="#E7DCC6" stroke="#2E2620" stroke-width="1.2"/>
+    <path d="M88 140 C88 82 232 82 232 140 C232 147 224 151 160 151 C96 151 88 147 88 140 Z" fill="#FBF7EC" stroke="#2E2620" stroke-width="1.4"/>
+    <path d="M80 136 C80 160 240 160 240 136 C240 147 80 147 80 136 Z" fill="#E7DCC6" stroke="#2E2620" stroke-width="1.4"/>
+    <path class="stitches" d="M92 131 C94 146 226 146 228 131" fill="none" stroke="#B96A70" stroke-width="1.5" stroke-dasharray="4.5 4" stroke-linecap="round"/>
+    ${motifGroup(m,133,98,.3,7,'8 7')}`,
+  bodysuit:m=>`
+    <ellipse cx="160" cy="206" rx="98" ry="9" fill="#2E2620" opacity=".07"/>
+    <path d="M118 62 C126 52 138 48 160 48 C182 48 194 52 202 62 L218 80 L202 96 L194 88 L194 178 C194 186 186 190 160 190 C134 190 126 186 126 178 L126 88 L118 96 L102 80 Z" fill="#FBF7EC" stroke="#2E2620" stroke-width="1.4" stroke-linejoin="round"/>
+    <path class="stitches" d="M138 57 C146 65 174 65 182 57" fill="none" stroke="#B96A70" stroke-width="1.5" stroke-dasharray="4.5 4" stroke-linecap="round"/>
+    <path class="stitches" d="M108 77 L117 85 M212 77 L203 85" fill="none" stroke="#B96A70" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3.5 3"/>
+    <text x="160" y="130" text-anchor="middle" font-family="'Pinyon Script',cursive" font-size="30" fill="#B96A70">Ella</text>
+    <path class="stitches" d="M138 142 C152 148 168 148 182 142" fill="none" stroke="#B96A70" stroke-width="1.4" stroke-dasharray="4 4" stroke-linecap="round"/>`,
+  bib:m=>`
+    <ellipse cx="160" cy="200" rx="90" ry="9" fill="#2E2620" opacity=".07"/>
+    <path d="M146 68 C136 58 128 52 118 46" fill="none" stroke="#2E2620" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M174 68 C184 58 192 52 202 46" fill="none" stroke="#2E2620" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M118 46 q-13 -10 -15 3 q11 6 15 -3 z" fill="#E7DCC6" stroke="#2E2620" stroke-width="1.2"/>
+    <path d="M202 46 q13 -10 15 3 q-11 6 -15 -3 z" fill="#E7DCC6" stroke="#2E2620" stroke-width="1.2"/>
+    <path d="M160 76 C146 60 116 62 108 84 C98 110 106 144 130 160 C148 171 172 171 190 160 C214 144 222 110 212 84 C204 62 174 60 160 76 Z" fill="#FBF7EC" stroke="#2E2620" stroke-width="1.4"/>
+    <path class="stitches" d="M160 84 C148 70 122 72 115 90 C107 112 114 140 135 154 C150 163 170 163 185 154 C206 140 213 112 205 90 C198 72 172 70 160 84" fill="none" stroke="#B96A70" stroke-width="1.5" stroke-dasharray="4.5 4" stroke-linecap="round"/>
+    ${motifGroup(m,136,96,.48,5,'7 6')}`,
+  box:m=>`
+    <ellipse cx="160" cy="206" rx="105" ry="9" fill="#2E2620" opacity=".07"/>
+    <path d="M84 118 L84 170 L160 196 L160 144 Z" fill="#F1E9D8" stroke="#2E2620" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M160 144 L236 118 L236 170 L160 196 Z" fill="#E2D6BE" stroke="#2E2620" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M84 118 L160 92 L236 118 L160 144 Z" fill="#EADFC8" stroke="#2E2620" stroke-width="1.4" stroke-linejoin="round"/>
+    <path class="stitches" d="M92 119 L160 95 L228 119" fill="none" stroke="#B96A70" stroke-width="1.4" stroke-dasharray="4 4" stroke-linecap="round"/>
+    <path d="M134 102 L212 128" stroke="#B96A70" stroke-width="7" stroke-linecap="round"/>
+    <path d="M186 102 L108 128" stroke="#B96A70" stroke-width="7" stroke-linecap="round"/>
+    <path d="M160 145 L160 195" stroke="#B96A70" stroke-width="7" stroke-linecap="round"/>
+    <path d="M160 117 C146 106 134 112 142 120 C134 126 148 132 160 121 M160 117 C174 106 186 112 178 120 C186 126 172 132 160 121" fill="#B96A70" stroke="#9E555C" stroke-width="1.2"/>
+    <circle cx="160" cy="119" r="3.6" fill="#9E555C"/>
+    <path d="M176 123 L194 135" stroke="#2E2620" stroke-width="1.3"/>
+    <path d="M192 132 l21 11 -9 17 -21 -11 z" fill="#FBF7EC" stroke="#2E2620" stroke-width="1.2" stroke-linejoin="round"/>
+    <circle cx="199" cy="139" r="1.6" fill="#2E2620" opacity=".55"/>
+    <text x="203" y="153" font-family="'Pinyon Script',cursive" font-size="13" fill="#B96A70" transform="rotate(27 203 153)">Q</text>`
+};
+const TILES=[
+  {cls:'t1',type:'blanket',motif:'bunny',bg:'#F1E9D8',h:430,name:'Cloud Muslin Blanket',desc:'Four-layer organic muslin with a hand-bound edge',price:'$58'},
+  {cls:'t2',type:'bonnet',motif:'crown',bg:'#F4E3DA',h:240,name:'Sunday Bonnet',desc:'Washed linen, ribbon ties, heirloom trim',price:'$42'},
+  {cls:'t3',type:'bodysuit',motif:'duck',bg:'#E2EAF0',h:300,name:'First-Day Bodysuit',desc:'Pima cotton, lap shoulders, flat seams',price:'$34'},
+  {cls:'t4',type:'bib',motif:'heart',bg:'#DFE6D3',h:270,name:'Petal Bib',desc:'Double terry with a scalloped petal edge',price:'$26'},
+  {cls:'t5',type:'box',motif:'star',bg:'#EAE0CB',h:230,name:'The Keepsake Box',desc:'Rigid board, stitched lid monogram, tissue inside',price:'$95'}
+];
+qs('#tilesRoot').innerHTML=TILES.map((t,i)=>`
+  <article class="tile ${t.cls}" data-motif="${t.motif}">
+    <div class="tile-art" style="background:${t.bg};height:${t.h}px">
+      <span class="tile-no">0${i+1}</span>
+      <svg viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet"><g class="ill">${IL[t.type](t.motif)}</g></svg>
+    </div>
+    <div class="tile-meta">
+      <div><h3>${t.name}</h3><p>${t.desc}</p></div>
+      <div class="tile-buy"><span class="price">${t.price}</span>
+        <button class="stitch-link pers">Personalise
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h17M14 5l7 7-7 7"/></svg>
+        </button></div>
+    </div>
+  </article>`).join('');
+qsa('.pers').forEach(b=>b.addEventListener('click',e=>{
+  const tile=e.target.closest('.tile');
+  state.motif=tile.dataset.motif;
+  syncControls();renderPreview();playStitch();
+  scrollToEl(qs('#studio'));
+  toast(`The ${MOTIFS[state.motif].n.toLowerCase()} motif is threaded into the Studio.`);
+}));
+
+/* ================================================================
+   The Monogram Studio
+   ================================================================ */
+const FONTS=[
+  {id:'pinyon',n:'Pinyon',css:"'Pinyon Script',cursive",f:1,style:'',w:400},
+  {id:'parisienne',n:'Parisienne',css:"'Parisienne',cursive",f:.98,style:'',w:400},
+  {id:'cormorant',n:'Cormorant',css:"'Cormorant Garamond',serif",f:1.02,style:'italic',w:600},
+  {id:'caveat',n:'Caveat',css:"'Caveat',cursive",f:1.16,style:'',w:600},
+  {id:'fraunces',n:'Fraunces',css:"'Fraunces',serif",f:.86,style:'',w:600}
+];
+const THREADS=[
+  {n:'Dusty Rose',c:'#B96A70'},{n:'Meadow Sage',c:'#7E8D6F'},{n:'Powder Blue',c:'#8FA8BD'},
+  {n:'Butterscotch',c:'#C99A3F'},{n:'Heather',c:'#93839F'},{n:'Terracotta',c:'#C0714E'},
+  {n:'Espresso',c:'#4A3B2E'},{n:'Oat',c:'#B7A184'}
+];
+const FABRICS=[
+  {n:'Ivory',c:'#F8F3E8'},{n:'Blush',c:'#F4E3DA'},{n:'Powder',c:'#E2EAF0'},
+  {n:'Sage',c:'#DFE6D3'},{n:'Oat',c:'#EAE0CB'}
+];
+const STITCHES={
+  satin:{n:'Satin',dashF:'100',dashM:'1',wM:3.4,cap:'round'},
+  running:{n:'Running',dashF:'1.7 1.35',dashM:'0.03 0.022',wM:2.6,cap:'butt'},
+  chain:{n:'Chain',dashF:'0.06 1.6',dashM:'0.002 0.05',wM:4.2,cap:'round'}
+};
+const state={name:'Eleanor',cap:'07 · 14 · 2025',font:'pinyon',motif:'bunny',thread:0,fabric:0,stitch:'satin'};
+qs('#fontChips').innerHTML=FONTS.map(f=>`<button class="chip" data-font="${f.id}" style="font-family:${f.css};font-style:${f.style};font-weight:${f.w}">${f.n}</button>`).join('');
+qs('#motifChips').innerHTML=Object.entries(MOTIFS).map(([id,m])=>
+  `<button class="mchip" data-motif="${id}" aria-label="${m.n}"><svg viewBox="0 0 100 100">${m.d.map(d=>`<path d="${d}"/>`).join('')}</svg></button>`).join('');
+qs('#threadDots').innerHTML=THREADS.map((t,i)=>`<button class="dot" data-i="${i}" style="background:${t.c}" aria-label="${t.n} thread"></button>`).join('');
+qs('#fabDots').innerHTML=FABRICS.map((f,i)=>`<button class="sq" data-i="${i}" style="background:${f.c}" aria-label="${f.n} cloth"></button>`).join('');
+const pvSvg=qs('#pvSvg'),pvFab=qs('#pvFab'),pvFrame=qs('#pvFrame'),pvName=qs('#pvName'),
+  pvCap=qs('#pvCap'),pvMotifG=qs('#pvMotifG'),pvMaskG=qs('#pvMaskG'),
+  pvClipRect=qs('#pvClipRect'),pvFrameCover=qs('#pvFrameCover'),pvCrosses=qs('#pvCrosses');
+function syncControls(){
+  qsa('#fontChips .chip').forEach(c=>c.classList.toggle('sel',c.dataset.font===state.font));
+  qsa('#motifChips .mchip').forEach(c=>c.classList.toggle('sel',c.dataset.motif===state.motif));
+  qsa('#threadDots .dot').forEach(c=>c.classList.toggle('sel',+c.dataset.i===state.thread));
+  qsa('#fabDots .sq').forEach(c=>c.classList.toggle('sel',+c.dataset.i===state.fabric));
+  qsa('#stitchChips .schip').forEach(c=>c.classList.toggle('sel',c.dataset.stitch===state.stitch));
+}
+function fitPreviewName(){
+  const f=FONTS.find(x=>x.id===state.font),len=state.name.length||6;
+  let fs=Math.round(88*f.f*(len>8?(8/len)*.94:1));
+  pvName.setAttribute('font-size',fs);
+  const w=pvName.getComputedTextLength();
+  if(w>540){fs=Math.max(28,fs*540/w);pvName.setAttribute('font-size',fs)}
+}
+function renderPreview(){
+  const f=FONTS.find(x=>x.id===state.font),ST=STITCHES[state.stitch];
+  pvFab.style.fill=FABRICS[state.fabric].c;
+  pvName.setAttribute('font-family',f.css);
+  pvName.setAttribute('font-style',f.style);
+  pvName.setAttribute('font-weight',f.w);
+  pvName.textContent=state.name.trim()||'Eleanor';
+  pvName.style.fill=THREADS[state.thread].c;
+  try{fitPreviewName()}catch(e){}
+  pvCap.textContent=state.cap.trim();
+  pvCap.style.fill=THREADS[state.thread].c;
+  pvFrame.style.stroke=THREADS[state.thread].c;
+  pvFrame.style.strokeDasharray=ST.dashF;
+  pvFrame.style.strokeLinecap=ST.cap;
+  qsa('#pvCrosses .cross').forEach(c=>c.style.stroke=THREADS[state.thread].c);
+  pvMotifG.innerHTML=MOTIFS[state.motif].d.map(d=>
+    `<path d="${d}" pathLength="1" fill="none" stroke="${THREADS[state.thread].c}"
+      stroke-width="${ST.wM}" stroke-linecap="${ST.cap}" stroke-linejoin="round"
+      stroke-dasharray="${ST.dashM}"/>`).join('');
+  syncControls();
+}
+let pvSession=0;
+function retrig(el){el.classList.remove('go');void el.getBoundingClientRect();el.classList.add('go')}
+function playStitch(){
+  if(RM){pvClipRect.setAttribute('width',560);pvCap.style.opacity=state.cap.trim()?.85:0;
+    pvFrameCover.style.strokeDashoffset=0;retrig(pvCrosses);return}
+  const ses=++pvSession,e=t=>1-Math.pow(1-t,3);
+  const tw=(dur,step,delay=0)=>{const t0=performance.now()+delay;
+    (function f(n){if(ses!==pvSession)return;if(n<t0){requestAnimationFrame(f);return}
+      const t=Math.min(1,(n-t0)/dur);step(e(t));if(t<1)requestAnimationFrame(f)})(performance.now())};
+  pvFrameCover.style.strokeDashoffset=100;
+  tw(1050,t=>pvFrameCover.style.strokeDashoffset=100-100*t,60);
+  retrig(pvCrosses);
+  const m=MOTIFS[state.motif],ST=STITCHES[state.stitch];
+  pvMaskG.innerHTML=m.map(d=>`<path d="${d}" pathLength="1" fill="none" stroke="#fff"
+    stroke-width="${ST.wM+3.4}" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>`).join('');
+  [...pvMaskG.children].forEach((c,i)=>tw(620,t=>c.style.strokeDashoffset=1-t,140+i*110));
+  pvClipRect.setAttribute('width',0);
+  tw(600,t=>pvClipRect.setAttribute('width',560*t),430);
+  pvCap.style.opacity=0;
+  tw(380,t=>pvCap.style.opacity=t*(state.cap.trim()?.85:0),920);
+}
+qs('#inName').addEventListener('input',e=>{state.name=e.target.value;renderPreview()});
+qs('#inCap').addEventListener('input',e=>{state.cap=e.target.value;renderPreview();
+  pvCap.style.opacity=e.target.value.trim()?.85:0});
+qs('#fontChips').addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;state.font=c.dataset.font;renderPreview();playStitch()});
+qs('#motifChips').addEventListener('click',e=>{const c=e.target.closest('.mchip');if(!c)return;state.motif=c.dataset.motif;renderPreview();playStitch()});
+qs('#threadDots').addEventListener('click',e=>{const c=e.target.closest('.dot');if(!c)return;state.thread=+c.dataset.i;renderPreview();playStitch()});
+qs('#fabDots').addEventListener('click',e=>{const c=e.target.closest('.sq');if(!c)return;state.fabric=+c.dataset.i;renderPreview();playStitch()});
+qs('#stitchChips').addEventListener('click',e=>{const c=e.target.closest('.schip');if(!c)return;state.stitch=c.dataset.stitch;renderPreview();playStitch()});
+qs('#btnReplay').addEventListener('click',()=>playStitch());
+qs('#btnSurprise').addEventListener('click',()=>{
+  const pick=a=>a[Math.floor(Math.random()*a.length)];
+  let f;do{f=pick(FONTS).id}while(f===state.font);state.font=f;
+  let m;do{m=pick(Object.keys(MOTIFS))}while(m===state.motif);state.motif=m;
+  let t;do{t=Math.floor(Math.random()*THREADS.length)}while(t===state.thread);state.thread=t;
+  state.fabric=Math.floor(Math.random()*FABRICS.length);
+  state.stitch=pick(Object.keys(STITCHES));
+  renderPreview();playStitch();
+  toast('A fresh combination, stitched up for you.');
+});
+qs('#btnAdd').addEventListener('click',()=>{
+  const f=FONTS.find(x=>x.id===state.font);
+  qs('#fMsg').value=`Studio commission —\nName: "${state.name.trim()||'Eleanor'}"\nLettering: ${f.n}\nMotif: ${MOTIFS[state.motif].n}\nThread: ${THREADS[state.thread].n} on ${FABRICS[state.fabric].n} cloth\nStitch: ${STITCHES[state.stitch].n}\n\nPlease send a digitised proof.`;
+  scrollToEl(qs('#contact'));
+  toast('Your specification was stitched into the enquiry below.');
+  setTimeout(()=>qs('#fName').focus({preventScroll:true}),900);
+});
+qs('#pvWrap').addEventListener('pointermove',e=>{
+  const r=e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+  e.currentTarget.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+});
+document.fonts.ready.then(()=>renderPreview());
+renderPreview();
+setTimeout(()=>playStitch(),2600);
+
+/* ---------- voices slider ---------- */
+const Q=qsa('#quotes .q'),QD=qsa('#qDashes i');let qi=0,qTimer;
+function showQ(i){qi=(i+Q.length)%Q.length;
+  Q.forEach((q,k)=>q.classList.toggle('active',k===qi));
+  QD.forEach((d,k)=>d.classList.toggle('on',k===qi))}
+function qAuto(){clearInterval(qTimer);qTimer=setInterval(()=>showQ(qi+1),6200)}
+qs('#qNext').addEventListener('click',()=>{showQ(qi+1);qAuto()});
+qs('#qPrev').addEventListener('click',()=>{showQ(qi-1);qAuto()});
+qs('#voices').addEventListener('pointerenter',()=>clearInterval(qTimer));
+qs('#voices').addEventListener('pointerleave',qAuto);
+qAuto();
+
+/* ---------- commissions accordion ---------- */
+qsa('.tier-head').forEach(h=>h.addEventListener('click',()=>{
+  const t=h.closest('.tier'),open=t.classList.contains('open');
+  qsa('.tier').forEach(x=>{x.classList.remove('open');qs('.tier-head',x).setAttribute('aria-expanded','false')});
+  if(!open){t.classList.add('open');h.setAttribute('aria-expanded','true')}
+}));
+
+/* ---------- contact form ---------- */
+qs('#cForm').addEventListener('submit',e=>{
+  e.preventDefault();let ok=true;
+  const chk=(wrap,cond)=>{qs(wrap).classList.toggle('err',!cond);if(!cond)ok=false};
+  chk('#fWrapName',qs('#fName').value.trim().length>1);
+  chk('#fWrapEmail',/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(qs('#fEmail').value.trim()));
+  chk('#fWrapMsg',qs('#fMsg').value.trim().length>5);
+  if(!ok)return;
+  // GitHub Pages is static hosting: prepare an email instead of claiming
+  // that a server received the enquiry.
+  const subject='Website enquiry — '+qs('#fType').value;
+  const body=[
+    'Name: '+qs('#fName').value.trim(),
+    'Email: '+qs('#fEmail').value.trim(),
+    'Request: '+qs('#fType').value,
+    '',
+    'Details:',
+    qs('#fMsg').value.trim()
+  ].join('\\n');
+  toast('Opening your email app. Send the prepared email to complete your enquiry.');
+  window.location.href='mailto:hello@qualityproduct.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
+qsa('#cForm input, #cForm textarea').forEach(i=>i.addEventListener('input',()=>i.closest('.fld').classList.remove('err')));
+qs('#toTop').addEventListener('click',()=>{if(lenis)lenis.scrollTo(0,{duration:1.3});else scrollTo({top:0,behavior:RM?'auto':'smooth'})});
+</script>
+</body>
+</html>
